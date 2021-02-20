@@ -13,8 +13,7 @@ permalink: communication/mqtt/comm
 - TOC
 {:toc}
 
-
-### /comm/in/{robotID}
+### /comm/in/simple/{robotID}
 
 <table>
     <tr><td>Source</td><td> Server</td></tr>
@@ -24,13 +23,34 @@ permalink: communication/mqtt/comm
         <i>[message]</i>
     </td></tr>
     <tr><td>Description</td><td>
-        The server will send a communication message to a robot.
-        Pure virtual implementation, receivers will be decided by the simulation server.
+        The server will send a message sent via <i>simple communication</i> to a robot.
+        A pure virtual implementation, receivers will be decided by the simulation server.
 
         <br><br>
         <dd>robotID: ID number of the robot</dd>
-        <dd>message: The message string, max lenght: 64 chars</dd>
+        <dd>message: The message string, max length: 64 chars</dd>
     </td></tr>
+
+</table>
+
+### /comm/in/direct/{robotID}
+
+<table>
+    <tr><td>Source</td><td> Server</td></tr>
+    <tr><td>Destination</td><td> Robot</td></tr>
+    <tr><td>Data Type</td><td> String</td></tr>
+    <tr><td>Message Format</td><td>
+        <i>[message]</i>
+    </td></tr>
+    <tr><td>Description</td><td>
+        The server will send a message sent via <i>directed communication</i> to a robot.
+        A pure virtual implementation, receivers will be decided by the simulation server.
+
+        <br><br>
+        <dd>robotID: ID number of the robot</dd>
+        <dd>message: The message string, max length: 64 chars</dd>
+    </td></tr>
+
 </table>
 
 ### /comm/out/{protocol}
@@ -43,8 +63,9 @@ permalink: communication/mqtt/comm
         <div class="language-json highlighter-rouge">
             <code class="highlight">
                 {
-                    “id”:{robotID},
-                    “msg”: “This is a sample”
+                    "id":[robotID],
+                    "msg": "This is a sample",
+                    "dist":[dist]
                 }
             </code>
         </div>
@@ -54,8 +75,10 @@ permalink: communication/mqtt/comm
         Server will decide the robots who can receive the message.
 
         <br><br>
-        <dd>protocol: simple, directional</dd>
-        <dd>id: ID number of the robot</dd>
-        <dd>message: The message string, max lenght: 64 chars</dd>
+        <dd>protocol: simple, direct</dd>
+        <dd>robotId: ID number of the robot</dd>
+        <dd>message: The message string, max length: 64 chars</dd>
+        <dd>dist (optional): maximum distance that message can be sent.</dd>
     </td></tr>
+
 </table>
