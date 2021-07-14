@@ -49,9 +49,12 @@
         {% endif -%}
 
     </ul>
-    <a class="edit" href="#" title="Edit on GitHub" rel="noreferrer" target="_blank">
+
+    {% if page.gh_link -%}
+    <a class="edit" href="{{ site.gh_edit_repository }}/blob/{{ site.gh_edit_branch }}/{{ page.gh_link }}" title="Edit on GitHub" rel="noreferrer" target="_blank">
         <i class="fa fa-github fa-13"></i> Edit on GitHub
     </a>
+    {% endif -%}
 </div>
 
 {% endunless %}

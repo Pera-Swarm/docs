@@ -4,6 +4,8 @@ parent: Localization
 title: Paspberry Pi
 nav_order: 1
 permalink: localization/raspberry-pi
+
+gh_link: docs/localization/raspberry-pi.md
 ---
 
 This is run on a Raspberry Pi computer. With the help of default Raspberry Pi camera, this codebase can act as the localization system of the hardware robots.

@@ -32,7 +32,7 @@ You can turn on or off the motors library functionality by comment out and comme
 
 There are two types of motors drivers are supported.
 
-1. Servo Drive
+1.Servo Drive
 
 **Warning: This is discontinued implementation**
 
@@ -46,7 +46,7 @@ void SW_Motors::attach()   	// Attach Servo motors
 void SW_Motors::detach()   	// Detach Servo motors
 ```
 
-2. PWM Drive
+2.PWM Drive
 
 With this, you can connect any standard motors through a H-bridge motor driver to the controller board. Please refer *MotorDriver daughter board* (will be updated soon) for detailed technical information.
 
