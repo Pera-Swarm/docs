@@ -5,6 +5,8 @@ grand_parent: Communication
 title: Sensor
 nav_order: 6
 permalink: communication/mqtt/sensor
+
+gh_link: docs/communication/mqtt/mqtt_sensor.md
 ---
 
 ## Sensor Protocols

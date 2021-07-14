@@ -5,6 +5,8 @@ grand_parent: Communication
 title: Environment
 nav_order: 2
 permalink: communication/json/environment/
+
+gh_link: docs/communication/json/json_environment.md
 ---
 
 # Environment JSON
@@ -14,7 +16,7 @@ Following JSON Schemas are used to configure the Swarm Environment.
 
 Example:
 
-```json
+```js
 {
     "arena": {
         "xMin": -150,

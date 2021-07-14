@@ -12,38 +12,29 @@
     {% endunless %}
 
     <link rel="shortcut icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
-
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">-->
-
-    <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css" />
 
-    {% if site.ga_tracking != nil %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_tracking }}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', '{{ site.ga_tracking }}'{% unless site.ga_tracking_anonymize_ip == nil %}, { 'anonymize_ip': true }{% endunless %});
-    </script>
-
-    {% endif %}
+    {% include google_analytics.html %}
 
 
-    <script src="{{ '/assets/js/vendor/jquery-3.5.1.min.js' | relative_url }}"></script>
     {% if site.search_enabled != false %}
     <script type="text/javascript" src="{{ '/assets/js/vendor/lunr.min.js' | relative_url }}"></script>
     {% endif %}
-    <script type="text/javascript" src="{{ '/assets/js/just-the-docs.js' | relative_url }}"></script>
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
-
-    <script type="text/javascript" src="{{ '/assets/js/index.js' | relative_url }}"></script>
-    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>-->
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% seo %}
+
+    <script type="text/javascript">
+        window.ui = {
+            title: "jekyll-rtd-theme",
+            baseurl: "{{ site.baseurl }}",
+            i18n: {
+                search_results: "Search Results",
+                search_results_found: "Search finished, found # page(s) matching the search query.",
+                search_results_not_found: "Your search did not match any documents, please make sure that all characters are spelled correctly!"
+            }
+        };
+    </script>
 
 </head>
