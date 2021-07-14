@@ -11,49 +11,53 @@ layout: table_wrappers
 
     <div class="content-wrap">
         <div class="header d-flex flex-justify-between p-2 hide-lg hide-xl" aria-label="top navigation">
-            <button id="toggle" aria-label="Toggle menu" class="btn-octicon p-2 m-0 text-white" type="button"> <i class="fa fa-bars"></i> </button>
-            <div class="title flex-1 d-flex flex-justify-center"> <a class="h4 no-underline py-1 px-2 rounded-1" href="/">RunDocs</a> </div>
-        </div>
-        <div class="content p-3 p-sm-5">
-            <div class="navigation-top d-flex flex-justify-between">
-                <ul class="breadcrumb" role="navigation" aria-label="breadcrumbs navigation">
-                    <li class="breadcrumb-item"> <a class="no-underline" href="/" title="/docs"> <i class="fa fa-home"></i> </a> </li>
-                    <li class="breadcrumb-item"><a href="/contributing/">contributing</a></li>
-                    <li class="breadcrumb-item" aria-current="page">installing.md</li>
-                </ul>
-                <a class="edit" href="https://github.com/rundocs/rundocs.io/edit/master/docs/contributing/installing.md" title="Edit on GitHub" rel="noreferrer" target="_blank"> <i class="fa fa-edit"></i> </a>
+            <button id="toggle" aria-label="Toggle menu" class="btn-octicon p-2 m-0 text-white" type="button">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="title flex-1 d-flex flex-justify-center">
+                <a class="h4 no-underline py-1 px-2 rounded-1" href="{% link pages/home.md %}">{{ site.title }}</a>
             </div>
+        </div>
+
+        <div class="content p-3 p-sm-5">
+            {% include breadcrumb.html %}
             <hr>
 
-            <div role="main" itemscope="itemscope" itemtype="https://schema.org/Article">
+            <div class="vh-75 px-3" role="main" itemscope="itemscope" itemtype="https://schema.org/Article">
                 {{ content }}
             </div>
 
+            <!-- {% include pagination.html %} -->
 
-            <div class="navigation-bottom d-flex flex-justify-between py-3" role="navigation" aria-label="footer navigation">
-                <div class="prev"><a href="/contributing/fork-theme.html" class="btn" title="Fork the theme" accesskey="p" rel="prev"> <i class="fa fa-arrow-circle-left"></i> Previous </a></div>
-                <div class="next"><a href="/contributing/pull-request.html" class="btn" title="Pull request" accesskey="n" rel="next"> Next <i class="fa fa-arrow-circle-right"></i> </a></div>
-            </div>
             <hr>
-            <div class="copyright text-center text-gray" role="contentinfo"> <i class="fa fa-copyright"></i> <span class="time">2020,</span> <a class="text-gray" href="https://github.com/rundocs" rel="noreferrer" target="_blank">RunDocs</a> Revision <a class="text-gray" href="https://github.com/rundocs/rundocs.io/commit/c8d8a3027c9141fc70758e6a579b09b8f7b8602a" title="c8d8a3027c9141fc70758e6a579b09b8f7b8602a" rel="noreferrer" target="_blank">c8d8a30</a> </div>
+            <div class="copyright text-center text-gray" role="contentinfo">
+                <i class="fa fa-copyright"></i>
+                <span class="time">{{ site.time | date: '%Y' }},</span>
+                <a class="text-gray" href="#" rel="noreferrer" target="_blank">Pera-Swarm - Department of Computer Engineering, University of Peradeniya</a>
+                <br/>
+                <span class="small">Version <a class="text-gray" href="#" rel="noreferrer" target="_blank">{{ site.version }}</a></span>
+            </div>
         </div>
     </div>
+
     <div class="addons-wrap d-flex flex-column overflow-y-auto">
         <div class="status d-flex flex-justify-between p-2">
-            <div class="title p-1"> <i class="fa fa-book"></i> RunDocs </div>
-            <div class="branch p-1"> <span class="name"> master </span> <i class="fa fa-caret-down"></i> </div>
+            <div class="title p-1"><i class="fa fa-book"></i> Pera-Swarm </div>
+            <div class="branch p-1"><span class="name px-1">Main </span><i class="fa fa-caret-down"></i></div>
         </div>
         <div class="addons d-flex flex-column height-full p-2 d-none">
             <dl>
                 <dt>GitHub</dt>
-                <dd> <a href="https://github.com/rundocs/rundocs.io" title="Stars: 6"> <i class="fa fa-github"></i> Homepage </a> </dd>
-                <dd> <a href="https://github.com/rundocs/rundocs.io/issues" title="Open issues: 0"> <i class="fa fa-question-circle-o"></i> Issues </a> </dd>
-                <dd> <a href="https://github.com/rundocs/rundocs.io/zipball/master" title="Size: 59 Kb"> <i class="fa fa-download"></i> Download </a> </dd>
+                <dd><a href="https://github.com/Pera-Swarm/docs" title=""><i class="fa fa-github pr-1"></i> Homepage </a></dd>
+                <dd><a href="https://github.com/Pera-Swarm/docs/issues" title=""><i class="fa fa-question-circle-o pr-1"></i> Issues </a></dd>
+                <dd><a href="https://github.com/Pera-Swarm/docs/release" title=""><i class="fa fa-download pr-1"></i>Download</a></dd>
             </dl>
             <hr>
-            <div class="license f6 pb-2"> This <a href="/" title="RunDocs">Software</a> is under the terms of <a href="https://github.com/rundocs/rundocs.io">MIT License</a>. </div>
+            <div class="license f6 pb-2"><a href="{% link pages/home.md %}" title="Pera-Swarm">This</a> is under the terms of <a href="https://github.com/Pera-Swarm/docs">MIT License</a>. </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/gh/rundocs/jekyll-rtd-theme@2.0.10/assets/js/jquery.min.js" type="5fa0fa3b739fc1cea30740d2-text/javascript"></script><script src="https://cdn.jsdelivr.net/gh/rundocs/jekyll-rtd-theme@2.0.10/assets/js/theme.min.js" type="5fa0fa3b739fc1cea30740d2-text/javascript"></script> <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="5fa0fa3b739fc1cea30740d2-|49" defer=""></script>
+
+    {% include footer_scripts.html %}
+
 </body>
 </html>

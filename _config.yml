@@ -18,6 +18,8 @@ description: Complete documentation for Pera Swarm project
 baseurl: "/docs" # the subpath of your site, e.g. /blog
 url: "https://pera-swarm.ce.pdn.ac.lk" # the base hostname & protocol for your site, e.g. http://example.com
 
+version: v1.0.0
+
 permalink: pretty
 exclude:
   [
@@ -47,7 +49,7 @@ logo: "/assets/images/logo.png"
 
 # Enable or disable the site search
 # Supports true (default) or false
-search_enabled: true
+search_enabled: false
 search:
   # Split pages into sections that can be searched individually
   # Supports 1 - 6, default: 2

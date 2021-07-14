@@ -3,13 +3,20 @@
 <div class="sidebar-wrap overflow-hidden">
     <div class="sidebar height-full overflow-y-scroll overflow-x-hidden">
         <div class="header d-flex flex-column p-3 text-center">
-            <div class="title pb-1"> <a class="h4 no-underline py-1 px-2 rounded-1" href="/" title="Extends the continuous integration documentation capabilities of GitHub pages for everyone!"> <i class="fa fa-home"></i> RunDocs </a> </div>
-            <span class="version"></span>
-            <form class="search pt-2" action="/search.html" method="get" autocomplete="off"> <input class="form-control input-block input-sm" type="text" name="q" placeholder="Search docs..."> </form>
+            <div class="title pb-1">
+                <a class="h4 no-underline py-1 px-2 rounded-1" href="{% link pages/home.md %}" title="">
+                    <i class="fa fa-home mr-2 fa-13"></i>{{ site.title }}
+                </a>
+            </div>
+            <!-- <span class="version">{{ site.version }}</span> -->
+
+            {% if site.search_enabled -%}
+            <form class="search pt-2" action="/search.html" method="get" autocomplete="off">
+                <input class="form-control input-block input-sm" type="text" name="q" placeholder="Search docs..."/>
+            </form>
+            {% endif -%}
         </div>
         <div class="toctree py-2" data-spy="affix" role="navigation" aria-label="main navigation">
-
-
             {%- for node in pages_list -%}
             {%- if node.parent == nil -%}
             {%- unless node.nav_exclude -%}
@@ -35,7 +42,7 @@
                         {%- for grand_child in grand_children_list -%}
                         {%- unless grand_child.nav_exclude -%}
                         <li class="toc level-2 {% if page.url == grand_child.url %} active{% endif %}" data-sort="1" data-level="2">
-                            <a class="d-flex flex-items-baseline {% if page.url == grand_child.url %} active{% endif %}" href="{{ grand_child.url | relative_url }}">
+                            <a class="pl-3 d-flex flex-items-baseline {% if page.url == grand_child.url %} active{% endif %}" href="{{ grand_child.url | relative_url }}">
                                 {{ grand_child.title }}
                             </a>
                         </li>
@@ -52,45 +59,6 @@
             {%- endunless -%}
             {%- endif -%}
             {%- endfor -%}
-
-            <!-- Installation -->
-            <a class="caption d-block text-uppercase no-wrap px-2 py-0" href="/installing/"> Installation </a>
-            <ul>
-                <li class="toc level-1 " data-sort="1" data-level="1">
-                    <a class="d-flex flex-items-baseline " href="/installing/gem-based.html">1. Gem based method (stable)</a>
-                </li>
-                <li class="toc level-1 " data-sort="2" data-level="1"> <a class="d-flex flex-items-baseline " href="/installing/remote-theme.html">2. Remote theme method (latest)</a> </li>
-            </ul>
-
-            <!-- Configuration -->
-            <a class="caption d-block text-uppercase no-wrap px-2 py-0" href="/configuring/"> Configuration </a>
-            <ul>
-                <li class="toc level-1 " data-sort="1" data-level="1"> <a class="d-flex flex-items-baseline " href="/configuring/gemfile.html">1. Gemfile</a> </li>
-            </ul>
-
-            <a class="caption d-block text-uppercase no-wrap px-2 py-0" href="/writng/"> Writing Related </a>
-            <ul>
-                <li class="toc level-1 " data-sort="1" data-level="1"> <a class="d-flex flex-items-baseline " href="/writng/front-matter.html">1. Front matter</a> </li>
-                <li class="toc level-1 " data-sort="2" data-level="1"> <a class="d-flex flex-items-baseline " href="/writng/list.html">2. List directory</a> </li>
-                <li class="toc level-1 " data-sort="4" data-level="1"> <a class="d-flex flex-items-baseline " href="/writng/mermaid.html">4. Mermaid</a> </li>
-                <li class="toc level-1 " data-sort="5" data-level="1"> <a class="d-flex flex-items-baseline " href="/writng/admonitions.html">5. Admonition card</a> </li>
-            </ul>
-            <a class="caption d-block text-uppercase no-wrap px-2 py-0" href="/contributing/"> Contributing </a>
-            <ul>
-                <li class="toc level-1 " data-sort="1" data-level="1">
-                    <a class="d-flex flex-items-baseline " href="/contributing/fork-theme.html">1. Fork the theme</a>
-
-                    <ul>
-                        <li class="toc level-2 " data-sort="1" data-level="2">
-                            1.1. Fork the theme
-                        </li>
-                    </ul>
-
-                </li>
-                <li class="toc level-1 current" data-sort="2" data-level="1"> <a class="d-flex flex-items-baseline current" href="/contributing/installing.html">2. Installation</a> </li>
-                <li class="toc level-1 " data-sort="4" data-level="1"> <a class="d-flex flex-items-baseline " href="/contributing/pull-request.html">4. Pull request</a> </li>
-                <li class="toc level-1 " data-sort="5" data-level="1"> <a class="d-flex flex-items-baseline " href="/contributing/release.html">5. Release theme</a> </li>
-            </ul>
         </div>
     </div>
 </div>
