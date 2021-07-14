@@ -3,6 +3,8 @@ layout: default
 parent: Visualizer
 title: Repository
 nav_order: 1
+
+gh_link: docs/visualizer/repository.md
 ---
 
 This is a web-based 3d visualizer interface for the Swarm Simulator developed for the Pera Swarm project.
@@ -54,15 +56,15 @@ npm run build
 Cleans existing build folder while linting js folder and copies over the public assets folder from src. Then sets environment to production and compiles js and css into build.
 
 ## Other NPM Scripts
-You can run any of these individually if you'd like with the `npm run` command:
-* `prebuild` - Cleans up build folder and lints `src/js`
-* `clean` - Cleans build folder
-* `lint` - Runs lint on the `src/js` folder and uses the `.eslintrc` file in root for linting rules
-* `webpack-server` - Start up a  webpack-dev-server with hot-module-replacement
-* `webpack-watch` - Run webpack in dev environment with watch
-* `dev:js` - Run webpack in dev environment without watch
-* `build:dir` - Copy files and folders from `src/public` to `build`
-* `build:js` - Run webpack in production environment
+You can run any of these individually if you'd like with the 'npm run' command:
+* 'prebuild' - Cleans up build folder and lints 'src/js'
+* 'clean' - Cleans build folder
+* 'lint' - Runs lint on the 'src/js' folder and uses the '.eslintrc' file in root for linting rules
+* 'webpack-server' - Start up a  webpack-dev-server with hot-module-replacement
+* 'webpack-watch' - Run webpack in dev environment with watch
+* 'dev:js' - Run webpack in dev environment without watch
+* 'build:dir' - Copy files and folders from 'src/public' to 'build'
+* 'build:js' - Run webpack in production environment
 
 ## Input Controls
 * Arrow controls will pan

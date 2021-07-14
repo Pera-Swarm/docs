@@ -3,7 +3,8 @@ layout: default
 title: Visualizer
 nav_order: 3
 has_children: true
-permalink: visualizer
+permalink: visualizer/
+
 ---
 
 # Visualizer

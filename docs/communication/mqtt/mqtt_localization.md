@@ -5,6 +5,8 @@ grand_parent: Communication
 title: Localization
 nav_order: 3
 permalink: communication/mqtt/localization
+
+gh_link: docs/communication/mqtt/mqtt_localization.md
 ---
 
 ## Localization Protocols

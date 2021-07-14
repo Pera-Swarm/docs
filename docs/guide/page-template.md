@@ -2,10 +2,13 @@
 layout: default
 title: Page Template
 nav_order: 1
-parent: Documentation Guide
 permalink: documentation/pages
+parent: Useful Links
+
 search_exclude: true
 sitemap: false
+
+gh_link: docs/guide/page-template.md
 ---
 
 # Page Template

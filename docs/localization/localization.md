@@ -3,7 +3,7 @@ layout: default
 title: Localization
 nav_order: 4
 has_children: true
-permalink: localization
+permalink: localization/
 ---
 
 # Localization

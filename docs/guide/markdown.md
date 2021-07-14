@@ -2,10 +2,13 @@
 layout: default
 title: Markdown Formats
 nav_order: 2
-parent: Documentation Guide
 permalink: documentation/markdown
+parent: Useful Links
+
 search_exclude: true
 sitemap: false
+
+gh_link: docs/guide/markdown.md
 ---
 
 # Markdown Formats
@@ -29,7 +32,6 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 [Link to another page](another-page)
 [Link to page with new tab](https://www.google.com/){:target="_blank"}
 ```
-
 
 There should be whitespace between paragraphs.
 
@@ -73,7 +75,7 @@ GitHubPages::Dependencies.gems.each do |gem, version|
 end
 ```
 
-#### [](#header-4)Header 4 `with code not transformed`
+#### [](#header-4)Header 4
 
 *   This is an unordered list following a header.
 *   This is an unordered list following a header.
@@ -87,12 +89,13 @@ end
 
 ###### [](#header-6)Header 6
 
+
 | head1        | head two          | three |
 |:-------------|:------------------|:------|
 | ok           | good swedish fish | nice  |
 | out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+| ok           | good 'oreos'      | hmm   |
+| ok           | good 'zoute' drop | yumm  |
 
 <span style="color:orange; padding-bottom:0;" >Markdown Syntax:</span>
 ```md
