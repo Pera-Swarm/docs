@@ -2,6 +2,9 @@
     padding-right: 4px;
 }
 
+.mw-100{
+    max-width: 100%!important;
+}
 .vh-75{
     min-height: 75vh!important;
 }
