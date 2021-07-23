@@ -5,6 +5,8 @@ grand_parent: Communication
 title: Obstacles
 nav_order: 1
 permalink: communication/json/obstacles/
+
+gh_link: docs/communication/mqtt/mqtt_localization.md
 ---
 
 # Obstacles JSON
@@ -13,7 +15,7 @@ Following JSON Schemas are used to communicate obstacle details from the simualt
 (Not a fully completed yet)
 
 
-```json
+```js
 {
     id: 1000,
     name: "Obstacle Name",
@@ -58,7 +60,7 @@ Available geometric shapes, with parameters:
     - heightSegments: optional, default: 16
 
 #### Geometry for a box shaped object:
-```json
+```js
 {
     type: 'BoxGeometry',
     width: 300,
@@ -68,7 +70,7 @@ Available geometric shapes, with parameters:
 ```
 
 #### Geometry for a cylinder shaped object:
-```json
+```js
 {
     type: 'CylinderGeometry',
     radiusTop: 20,
@@ -78,7 +80,7 @@ Available geometric shapes, with parameters:
 ```
 
 #### Geometry for a sphere shaped object:
-```json
+```js
 {
     type: 'SphereGeometry',
     radius: 20
@@ -104,7 +106,7 @@ Available materials:
 [https://threejs.org/docs/#api/en/materials/MeshStandardMaterial]()
 
 Example:
-```json
+```js
 {
     type: 'MeshPhysicalMaterial',
     properties: {
@@ -114,7 +116,7 @@ Example:
 ```
 
 Full Example:
-```json
+```js
 {
   "geometry":{"type":"BoxGeometry","width":300,"height":20,"depth":5},
   "material":{"type":"MeshPhysicalMaterial","properties":{"color":7734009}},

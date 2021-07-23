@@ -3,7 +3,7 @@ layout: default
 title: Robots
 nav_order: 2
 has_children: true
-permalink: robots
+permalink: robots/
 ---
 
 # Robots

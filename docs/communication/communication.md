@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Communication
-nav_order: 5
+nav_order: 2
 has_children: true
 permalink: communication
 ---

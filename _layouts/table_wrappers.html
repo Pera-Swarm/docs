@@ -2,6 +2,9 @@
 layout: vendor/compress
 ---
 
-{% assign content_ = content | replace: '<table', '<div class="table-wrapper"><table' %}
+{% assign content_ = content | replace: '<table', '<div class="table-wrapper"><table class="table table-bordered" ' %}
 {% assign content_ = content_ | replace: '</table>', '</table></div>' %}
+
+{% assign content_ = content_ | replace: '<img', '<img class="px-5 py-2 img-fluid img-thumbnail mx-auto d-block mw-100" ' %}
+
 {{ content_ }}
