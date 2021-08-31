@@ -1,10 +1,12 @@
 ---
 layout: default
-parent: Firmware
+parent: Physical Robot
 grand_parent: Robots
 title: Neopixel LED Library
 nav_order: 6
-permalink: robot/firmware/neopixel_library
+permalink: robot/physical-robot/neopixel_library
+
+gh_link: docs/robot/physical-robot/neopixel.md
 ---
 
 # Neopixel LED Library

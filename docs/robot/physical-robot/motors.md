@@ -1,10 +1,12 @@
 ---
 layout: default
-parent: Firmware
+parent: Physical Robot
 grand_parent: Robots
 title: Motor Library
 nav_order: 1
-permalink: robot/firmware/motor_library
+permalink: robot/physical-robot/motor_library
+
+gh_link: docs/robot/physical-robot/motors.md
 ---
 
 # Motor Library

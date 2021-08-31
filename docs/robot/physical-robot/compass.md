@@ -1,13 +1,15 @@
 ---
 layout: default
-parent: Firmware
+parent: Physical Robot
 grand_parent: Robots
-title: IR Transceiver Library
-nav_order: 5
-permalink: robot/firmware/ir_library
+title: Compass Sensor Library
+nav_order: 4
+permalink: robot/physical-robot/compass_library
+
+gh_link: docs/robot/physical-robot/compass.md
 ---
 
-# IR Transceiver Library
+# Compass Sensor Library
 {: .no_toc }
 
 ### Table of content

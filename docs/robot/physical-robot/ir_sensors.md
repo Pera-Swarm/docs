@@ -1,13 +1,15 @@
 ---
 layout: default
-parent: Firmware
+parent: Physical Robot
 grand_parent: Robots
-title: Color Sensor Library
-nav_order: 3
-permalink: robot/firmware/color_library
+title: IR Transceiver Library
+nav_order: 5
+permalink: robot/physical-robot/ir_library
+
+gh_link: docs/robot/physical-robot/ir_sensors.md
 ---
 
-# Color Sensor Library
+# IR Transceiver Library
 {: .no_toc }
 
 ### Table of content
