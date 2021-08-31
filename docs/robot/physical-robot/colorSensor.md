@@ -1,13 +1,15 @@
 ---
 layout: default
-parent: Firmware
+parent: Physical Robot
 grand_parent: Robots
-title: Compass Sensor Library
-nav_order: 4
-permalink: robot/firmware/compass_library
+title: Color Sensor Library
+nav_order: 3
+permalink: robot/physical-robot/color_library
+
+gh_link: docs/robot/physical-robot/colorSensor.md
 ---
 
-# Compass Sensor Library
+# Color Sensor Library
 {: .no_toc }
 
 ### Table of content
