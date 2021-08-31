@@ -1,10 +1,12 @@
 ---
 layout: default
-parent: Firmware
+parent: Physical Robot
 grand_parent: Robots
 title: Distance Sensor Library
 nav_order: 2
-permalink: robot/firmware/distance_library
+permalink: robot/physical-robot/distance_library
+
+gh_link: docs/robot/physical-robot/distanceSensors.md
 ---
 
 # Distance Sensor Library
