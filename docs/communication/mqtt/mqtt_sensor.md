@@ -189,7 +189,7 @@ gh_link: docs/communication/mqtt/mqtt_sensor.md
 ### /sensor/proximity
 
 <table>
-    <tr><td>Source</td><td> Physical Robot</td></tr>
+    <tr><td>Source</td><td> Robot (Physical, Virtual)</td></tr>
     <tr><td>Destination</td><td> Simulator </td></tr>
     <tr><td>Data Type</td><td> JSON</td></tr>
     <tr><td>Message Format</td><td>
