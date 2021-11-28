@@ -19,6 +19,10 @@ gh_link: docs/robot/virtual-robot/robot-class.md
 
 ---
 
+
+{% assign sub_color = "color: orange;" %}
+
+
 ## Introduction
 The Robot Class implements a collection of sensors, communication methods, output devices, Helper functions to emulate a real hardware robot in the virtual space.
 
@@ -28,7 +32,7 @@ The Robot Class implements a collection of sensors, communication methods, outpu
 	id      - id of the robot (unique in virtual and real)
 	x       - x cordinates on the arena
 	y       - y cordinates on the arena
-	heading - 
+	heading - The absolute angle of the robot from the positive direction of the x axis 
 	reality - specify whether real or virtual
 </br>	
 
@@ -44,25 +48,23 @@ Sensor modules are written with physical hardware implementations in mind. The S
 
 #### getDistance()
 
-<span style="color: orange;">Description</span>
+<span style="{{%sub_color%}}">Description</span>
 
 Returns double type value for the distance of obstacle or robot in front.
     
-<span style="color: orange;">Syntax</span>
+<span style="{{%sub_color%}}">Syntax</span>
  
 	distSensor.getDistance() 
 
-
-
-<span style="color: orange;">Parameter</span>
+<span style="{{%sub_color%}}">Parameter</span>
 
 None
 
-<span style="color: orange;">Returns</span>
+<span style="{{%sub_color%}}">Returns</span>
 
 Double 
 
-<span style="color: orange;">Example Code</span>
+<span style="{{%sub_color%}}">Example Code</span>
 
 <----------Shall we add some code snippet like this for each method ?------------->
 
@@ -124,12 +126,48 @@ public class ObstacleAvoidRobot extends VirtualRobot {
 
 ### ProximitySensor(Robot robot, RobotMqttClient m) 
 
-#### getProximity() -> double
+#### getProximity()
+
+
+<span style="{{%sub_color%}}">Description</span>
+
+Returns ProximityReadingType value indicating .......
+    
+<span style="{{%sub_color%}}">Syntax</span>
+ 
+	distSensor.getProximity();
+
+
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+None
+
+<span style="{{%sub_color%}}">Returns</span>
+
+swarm.robot.types.ProximityReadingType
 
 ### ColorSensor(Robot robot, RobotMqttClient m) 
 
-#### getColor() -> RGBColorType
+#### getColor() 
 
+<span style="{{%sub_color%}}">Description</span>
+
+Returns RGBColor type value indicating the color detected at the front of the robot.
+    
+<span style="{{%sub_color%}}">Syntax</span>
+ 
+	distSensor.getColor() 
+
+
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+None
+
+<span style="{{%sub_color%}}">Returns</span>
+
+swarm.robot.types.RGBColorType 
 
 
 ## Communication
