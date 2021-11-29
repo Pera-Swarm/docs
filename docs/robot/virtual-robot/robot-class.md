@@ -258,39 +258,265 @@ Void
 
 Helper and Controller objects
 
-### MotionController(int robotId, double x, double y, double heading, RobotMqttClient m)
-
-	MotionController motion = new MotionController;
-
-### RobotMqttClient(int robotId, double x, double y, double heading, RobotMqttClient m)
-    
-	RobotMQTT robotMQTT = new RobotMQTT;
-
 ### Coordinate(int robotId, double x, double y, double heading, RobotMqttClient m)
 
-    Coordinate coordinates = new Coordinate;
-
+    Coordinate coordinates = new Coordinate(int robotId, double x, double y, double heading, RobotMqttClient m);
 
 #### getX()
 
+<span style="{{%sub_color%}}">Description</span>
+
+Get x coordinate of the robot.
+
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.getX()
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+None
+
+<span style="{{%sub_color%}}">Returns</span>
+
+double
+
 #### getY()
+
+<span style="{{%sub_color%}}">Description</span>
+
+Get y coordinate of the robot.
+
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.getY()
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+None
+
+<span style="{{%sub_color%}}">Returns</span>
+
+double
 
 #### setX(double x)
 
+<span style="{{%sub_color%}}">Description</span>
+
+Set x coordinate of the robot.
+
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.setX(double x)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+double
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
+
 #### setY(double y)
+
+<span style="{{%sub_color%}}">Description</span>
+
+Set y coordinate of the robot.
+
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.setY(double y)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+double
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
 
 #### getHeading()
 
+<span style="{{%sub_color%}}">Description</span>
+
+Get heading of the robot.
+
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.getHeading()
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+Void
+
+<span style="{{%sub_color%}}">Returns</span>
+
+double
+
+
 #### getHeadingRad()
+
+<span style="{{%sub_color%}}">Description</span>
+
+Get heading of the robot in Radians.
+
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.getHeadingRad()
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+Void
+
+<span style="{{%sub_color%}}">Returns</span>
+
+double
+
 
 #### setHeading(double heading)
 
+<span style="{{%sub_color%}}">Description</span>
+
+Set heading of the robot.
+
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.setHeading(double heading)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+double
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
+
 #### setHeadingRad(double heading)
 
-#### setCoordinate(double x, double y)
+<span style="{{%sub_color%}}">Description</span>
+
+Set heading of the robot in Radians.
+
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.setHeadingRad(double heading)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+double
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
 
 
 #### setCoordinate(double x, double y, double heading)
+
+<span style="{{%sub_color%}}">Description</span>
+
+Set x and y cordinates.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.setCoordinate(ddouble x, double y)
+	cordinates.setCoordinate(ddouble x, double y, double heading)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+double x : x cordinate
+double y : y cordinate
+double heading : heading of cordinate
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
+#### toString()
+
+<span style="{{%sub_color%}}">Description</span>
+
+return string of x , y and heading.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinate.toString()
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+Void
+
+<span style="{{%sub_color%}}">Returns</span>
+
+String
+
+#### publishCoordinate()
+
+
+<span style="{{%sub_color%}}">Description</span>
+
+Publish cordinate details under topic <b>localization/update</b>.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinate.publishCoordinate()
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+Void
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
+
+### MotionController(Coordinate c)
+
+	MotionController motion = new MotionController(Communication(c));
+
+#### rotate(int speed, int interval)
+
+#### move(int leftSpeed, int rightSpeed, int interval)
+
+#### rotateDegree(int speed, float degree)
+
+#### moveDistance(int speed, float distance)
+
+#### goToGoal(double targetX, double targetY, int velocity)
+
+#### isSpeedInRange(int speed)
+
+#### PID(double e)
+
+#### delay(int interval)
+
+#### getSlope(double x1, double y1, double x2, double y2)
+
+#### debug(String msg, int level)
+
+
+
+
+### RobotMqtt(int robotId,RobotMqttClient mqtt, char reality)
+    
+	RobotMQTT robotMQTT = new RobotMqtt(int robotId,RobotMqttClient mqtt, char reality)
+
+#### robotCreate(double x, double y, double heading)
+
+#### subscribe(mqttTopic key, String topic) 
+
+#### handleSubscription(Robot r, MqttMsg m)
+
+
 
 
 
