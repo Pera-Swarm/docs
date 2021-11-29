@@ -19,18 +19,20 @@ gh_link: docs/robot/virtual-robot/robot-class.md
 
 ---
 
+
+{% assign sub_color = "color: orange;" %}
+
 ## Introduction
 The Robot Class implements a collection of sensors, communication methods, output devices, Helper functions to emulate a real hardware robot in the virtual space.
 
 ### Robot(int id, double x, double y, double heading, char reality)
-<br>
 
 	id      - id of the robot (unique in virtual and real)
 	x       - x cordinates on the arena
 	y       - y cordinates on the arena
-	heading - 
+	heading - The absolute angle of the robot from the positive direction of the x axis 
 	reality - specify whether real or virtual
-</br>	
+
 
 Defines <b>robotMqttClient</b> for MQTT connection to create a robot instance in the Simulator.
 
@@ -41,28 +43,28 @@ Sensor modules are written with physical hardware implementations in mind. The S
 
 
 ### DistanceSensor(Robot robot, RobotMqttClient m) 
+	
+	DistanceSensor distSensor = new DistanceSensor(this, robotMqttClient);
 
 #### getDistance()
 
-<span style="color: orange;">Description</span>
+<span style="{{%sub_color%}}">Description</span>
 
 Returns double type value for the distance of obstacle or robot in front.
     
-<span style="color: orange;">Syntax</span>
+<span style="{{%sub_color%}}">Syntax</span>
  
 	distSensor.getDistance() 
 
-
-
-<span style="color: orange;">Parameter</span>
+<span style="{{%sub_color%}}">Parameter</span>
 
 None
 
-<span style="color: orange;">Returns</span>
+<span style="{{%sub_color%}}">Returns</span>
 
 Double 
 
-<span style="color: orange;">Example Code</span>
+<span style="{{%sub_color%}}">Example Code</span>
 
 <----------Shall we add some code snippet like this for each method ?------------->
 
@@ -124,62 +126,397 @@ public class ObstacleAvoidRobot extends VirtualRobot {
 
 ### ProximitySensor(Robot robot, RobotMqttClient m) 
 
-#### getProximity() -> double
+    ProximitySensor proximitySensor = new ProximitySensor(this, robotMqttClient);
+
+#### getProximity()
+
+<span style="{{%sub_color%}}">Description</span>
+
+Returns ProximityReadingType value indicating .......
+    
+<span style="{{%sub_color%}}">Syntax</span>
+
+	proximitySensor.getProximity();
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+None
+
+<span style="{{%sub_color%}}">Returns</span>
+
+swarm.robot.types.ProximityReadingType
 
 ### ColorSensor(Robot robot, RobotMqttClient m) 
 
-#### getColor() -> RGBColorType
+    ColorSensor colorSensor = new ColorSensor(this, robotMqttClient);
 
+#### getColor() 
 
+<span style="{{%sub_color%}}">Description</span>
+
+Returns RGBColor type value indicating the color detected at the front of the robot.
+    
+<span style="{{%sub_color%}}">Syntax</span>
+ 
+	colorSensor.getColor() 
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+None
+
+<span style="{{%sub_color%}}">Returns</span>
+
+swarm.robot.types.RGBColorType 
 
 ## Communication
 
 ### DirectedCommunication(int robotId, RobotMqttClient m)
 
+    DirectedCommunication directedComm = new DirectedCommunication(id, robotMqttClient);
+
+#### sendMessage(String msg, int distance)
 
 
+<span style="{{%sub_color%}}">Description</span>
+
+Sends message through MQTT.
+
+<span style="{{%sub_color%}}">Syntax</span>
+ 
+	directedComm.sendMessage(String msg, int distance);
+	directedComm.sendMessage(String msg);
+
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	String msg   : message to be passed
+	int distance : distance  
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
 
 ### SimpleCommunication(int robotId, RobotMqttClient m)
 
+	SimpleCommunication simpleComm = new SimpleCommunication(id, robotMqttClient);
+
+#### sendMessage(String msg, int distance)
+
+
+<span style="{{%sub_color%}}">Description</span>
+
+Sends message through MQTT.
+
+<span style="{{%sub_color%}}">Syntax</span>
+ 
+	simpleComm.sendMessage(String msg, int distance);
+	simpleComm.sendMessage(String msg);
+
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	String msg   : message to be passed
+	int distance : distance  
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
 
 ## Indicators
-
 Indicators used signify various states of the robots. 
+
 
 ### NeoPixel(Robot robot, RobotMqttClient m)
 
+	NeoPixel neoPixel = new NeoPixel(this, robotMqttClient);
 
 #### changeColor(int r, int g, int b)
+
+<span style="{{%sub_color%}}">Description</span>
+
 Used to change colors of the neopixel by inputing RGB values as integers.
+
+<span style="{{%sub_color%}}">Syntax</span>
+ 
+	neoPixel.changeColor(int r,int g,int b);
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	int r : red 
+	int g : green
+	int b : blue
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
 
 
 
 
 ## Helpers
 
+Helper and Controller objects
 
 ### Coordinate(int robotId, double x, double y, double heading, RobotMqttClient m)
 
+    Coordinate coordinates = new Coordinate(int robotId, double x, double y, double heading, RobotMqttClient m);
+
 #### getX()
+
+<span style="{{%sub_color%}}">Description</span>
+
+Get x coordinate of the robot.
+
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.getX()
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+None
+
+<span style="{{%sub_color%}}">Returns</span>
+
+double
 
 #### getY()
 
+<span style="{{%sub_color%}}">Description</span>
+
+Get y coordinate of the robot.
+
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.getY()
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+None
+
+<span style="{{%sub_color%}}">Returns</span>
+
+double
+
 #### setX(double x)
+
+<span style="{{%sub_color%}}">Description</span>
+
+Set x coordinate of the robot.
+
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.setX(double x)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+double
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
 
 #### setY(double y)
 
+<span style="{{%sub_color%}}">Description</span>
+
+Set y coordinate of the robot.
+
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.setY(double y)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+double
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
+
 #### getHeading()
+
+<span style="{{%sub_color%}}">Description</span>
+
+Get heading of the robot.
+
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.getHeading()
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+Void
+
+<span style="{{%sub_color%}}">Returns</span>
+
+double
+
 
 #### getHeadingRad()
 
+<span style="{{%sub_color%}}">Description</span>
+
+Get heading of the robot in Radians.
+
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.getHeadingRad()
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+Void
+
+<span style="{{%sub_color%}}">Returns</span>
+
+double
+
+
 #### setHeading(double heading)
+
+<span style="{{%sub_color%}}">Description</span>
+
+Set heading of the robot.
+
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.setHeading(double heading)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+double
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
 
 #### setHeadingRad(double heading)
 
-#### setCoordinate(double x, double y)
+<span style="{{%sub_color%}}">Description</span>
+
+Set heading of the robot in Radians.
+
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.setHeadingRad(double heading)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+double
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
 
 
 #### setCoordinate(double x, double y, double heading)
+
+<span style="{{%sub_color%}}">Description</span>
+
+Set x and y cordinates.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinates.setCoordinate(ddouble x, double y)
+	cordinates.setCoordinate(ddouble x, double y, double heading)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+double x : x cordinate
+double y : y cordinate
+double heading : heading of cordinate
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
+#### toString()
+
+<span style="{{%sub_color%}}">Description</span>
+
+return string of x , y and heading.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinate.toString()
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+Void
+
+<span style="{{%sub_color%}}">Returns</span>
+
+String
+
+#### publishCoordinate()
+
+
+<span style="{{%sub_color%}}">Description</span>
+
+Publish cordinate details under topic <b>localization/update</b>.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	cordinate.publishCoordinate()
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+Void
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
+
+### MotionController(Coordinate c)
+
+	MotionController motion = new MotionController(Communication(c));
+
+#### rotate(int speed, int interval)
+
+#### move(int leftSpeed, int rightSpeed, int interval)
+
+#### rotateDegree(int speed, float degree)
+
+#### moveDistance(int speed, float distance)
+
+#### goToGoal(double targetX, double targetY, int velocity)
+
+#### isSpeedInRange(int speed)
+
+#### PID(double e)
+
+#### delay(int interval)
+
+#### getSlope(double x1, double y1, double x2, double y2)
+
+#### debug(String msg, int level)
+
+
+
+
+### RobotMqtt(int robotId,RobotMqttClient mqtt, char reality)
+    
+	RobotMQTT robotMQTT = new RobotMqtt(int robotId,RobotMqttClient mqtt, char reality)
+
+#### robotCreate(double x, double y, double heading)
+
+#### subscribe(mqttTopic key, String topic) 
+
+#### handleSubscription(Robot r, MqttMsg m)
+
+
 
 
 
