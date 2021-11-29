@@ -22,19 +22,17 @@ gh_link: docs/robot/virtual-robot/robot-class.md
 
 {% assign sub_color = "color: orange;" %}
 
-
 ## Introduction
 The Robot Class implements a collection of sensors, communication methods, output devices, Helper functions to emulate a real hardware robot in the virtual space.
 
 ### Robot(int id, double x, double y, double heading, char reality)
-<br>
 
 	id      - id of the robot (unique in virtual and real)
 	x       - x cordinates on the arena
 	y       - y cordinates on the arena
 	heading - The absolute angle of the robot from the positive direction of the x axis 
 	reality - specify whether real or virtual
-</br>	
+
 
 Defines <b>robotMqttClient</b> for MQTT connection to create a robot instance in the Simulator.
 
@@ -45,6 +43,8 @@ Sensor modules are written with physical hardware implementations in mind. The S
 
 
 ### DistanceSensor(Robot robot, RobotMqttClient m) 
+	
+	DistanceSensor distSensor = new DistanceSensor(this, robotMqttClient);
 
 #### getDistance()
 
@@ -126,18 +126,17 @@ public class ObstacleAvoidRobot extends VirtualRobot {
 
 ### ProximitySensor(Robot robot, RobotMqttClient m) 
 
-#### getProximity()
+    ProximitySensor proximitySensor = new ProximitySensor(this, robotMqttClient);
 
+#### getProximity()
 
 <span style="{{%sub_color%}}">Description</span>
 
 Returns ProximityReadingType value indicating .......
     
 <span style="{{%sub_color%}}">Syntax</span>
- 
-	distSensor.getProximity();
 
-
+	proximitySensor.getProximity();
 
 <span style="{{%sub_color%}}">Parameter</span>
 
@@ -149,6 +148,8 @@ swarm.robot.types.ProximityReadingType
 
 ### ColorSensor(Robot robot, RobotMqttClient m) 
 
+    ColorSensor colorSensor = new ColorSensor(this, robotMqttClient);
+
 #### getColor() 
 
 <span style="{{%sub_color%}}">Description</span>
@@ -157,9 +158,7 @@ Returns RGBColor type value indicating the color detected at the front of the ro
     
 <span style="{{%sub_color%}}">Syntax</span>
  
-	distSensor.getColor() 
-
-
+	colorSensor.getColor() 
 
 <span style="{{%sub_color%}}">Parameter</span>
 
@@ -169,34 +168,108 @@ None
 
 swarm.robot.types.RGBColorType 
 
-
 ## Communication
 
 ### DirectedCommunication(int robotId, RobotMqttClient m)
 
+    DirectedCommunication directedComm = new DirectedCommunication(id, robotMqttClient);
+
+#### sendMessage(String msg, int distance)
 
 
+<span style="{{%sub_color%}}">Description</span>
+
+Sends message through MQTT.
+
+<span style="{{%sub_color%}}">Syntax</span>
+ 
+	directedComm.sendMessage(String msg, int distance);
+	directedComm.sendMessage(String msg);
+
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	String msg   : message to be passed
+	int distance : distance  
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
 
 ### SimpleCommunication(int robotId, RobotMqttClient m)
 
+	SimpleCommunication simpleComm = new SimpleCommunication(id, robotMqttClient);
+
+#### sendMessage(String msg, int distance)
+
+
+<span style="{{%sub_color%}}">Description</span>
+
+Sends message through MQTT.
+
+<span style="{{%sub_color%}}">Syntax</span>
+ 
+	simpleComm.sendMessage(String msg, int distance);
+	simpleComm.sendMessage(String msg);
+
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	String msg   : message to be passed
+	int distance : distance  
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
 
 ## Indicators
-
 Indicators used signify various states of the robots. 
+
 
 ### NeoPixel(Robot robot, RobotMqttClient m)
 
+	NeoPixel neoPixel = new NeoPixel(this, robotMqttClient);
 
 #### changeColor(int r, int g, int b)
+
+<span style="{{%sub_color%}}">Description</span>
+
 Used to change colors of the neopixel by inputing RGB values as integers.
+
+<span style="{{%sub_color%}}">Syntax</span>
+ 
+	neoPixel.changeColor(int r,int g,int b);
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	int r : red 
+	int g : green
+	int b : blue
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
 
 
 
 
 ## Helpers
 
+Helper and Controller objects
+
+### MotionController(int robotId, double x, double y, double heading, RobotMqttClient m)
+
+	MotionController motion = new MotionController;
+
+### RobotMqttClient(int robotId, double x, double y, double heading, RobotMqttClient m)
+    
+	RobotMQTT robotMQTT = new RobotMQTT;
 
 ### Coordinate(int robotId, double x, double y, double heading, RobotMqttClient m)
+
+    Coordinate coordinates = new Coordinate;
+
 
 #### getX()
 
