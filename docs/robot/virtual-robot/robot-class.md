@@ -527,20 +527,94 @@ Void
 
 #### rotateDegree(int speed, float degree)
 
+//To be implemented
+
 #### moveDistance(int speed, float distance)
+
+//To be implemented
 
 #### goToGoal(double targetX, double targetY, int velocity)
 
+<span style="{{%sub_color%}}">Description</span>
+
+Move virtual robot to defined location
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	motion.gotoGoal(double targetX, int targetY, int velocity,in t interval )
+	motion.gotoGoal(double targetX, int targetY, int velocity)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	double targetX : target x coordinate
+	double targetY : target y coordinate
+	int velocity   : velcoity of robot
+	int interval   : ............................   
+
+<span style="{{%sub_color%}}">Returns</span>
+
+boolean
+
 #### isSpeedInRange(int speed)
 
-#### PID(double e)
+<span style="{{%sub_color%}}">Description</span>
+
+Check if given speed is in acceptable range (if speed within ROBOT_SPEED_MIN && ROBOT_SPEED_MAX).
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	motion.isSpeedInRange(int speed)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	int speed : Speed of the robot 
+
+<span style="{{%sub_color%}}">Returns</span>
+
+boolean
 
 #### delay(int interval)
 
+<span style="{{%sub_color%}}">Description</span>
+
+Delay to hold thread.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	motion.delay(int interval)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	int interval : sleep for a defined interval  
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
+<!------ Is this definiton correct? ----->
 #### getSlope(double x1, double y1, double x2, double y2)
 
-#### debug(String msg, int level)
+<span style="{{%sub_color%}}">Description</span>
 
+Angle in degrees between two points.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	motion.getSlop(idouble x1, double y1, double x2, double y2)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	double x1 : start x cordinate
+	double y1 : start y cordinate
+	double x2 : goal x cordinate
+	double y2 : goal y cordinate
+
+<span style="{{%sub_color%}}">Returns</span>
+
+double
+
+#### debug(String msg, int level)
+<!--------Is this part of the documentation--------->
 
 
 
