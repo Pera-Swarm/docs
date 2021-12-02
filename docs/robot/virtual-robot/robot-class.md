@@ -170,31 +170,6 @@ swarm.robot.types.RGBColorType
 
 ## Communication
 
-### DirectedCommunication(int robotId, RobotMqttClient m)
-
-    DirectedCommunication directedComm = new DirectedCommunication(id, robotMqttClient);
-
-#### sendMessage(String msg, int distance)
-
-
-<span style="{{%sub_color%}}">Description</span>
-
-Sends message through MQTT.
-
-<span style="{{%sub_color%}}">Syntax</span>
- 
-	directedComm.sendMessage(String msg, int distance);
-	directedComm.sendMessage(String msg);
-
-
-<span style="{{%sub_color%}}">Parameter</span>
-
-	String msg   : message to be passed
-	int distance : distance  
-
-<span style="{{%sub_color%}}">Returns</span>
-
-Void
 
 ### SimpleCommunication(int robotId, RobotMqttClient m)
 
@@ -205,7 +180,7 @@ Void
 
 <span style="{{%sub_color%}}">Description</span>
 
-Sends message through MQTT.
+Broadcasts message to robots within the defined radius.
 
 <span style="{{%sub_color%}}">Syntax</span>
  
@@ -216,13 +191,38 @@ Sends message through MQTT.
 <span style="{{%sub_color%}}">Parameter</span>
 
 	String msg   : message to be passed
-	int distance : distance  
+	int distance : radius that will receive the broadcasted message
 
 <span style="{{%sub_color%}}">Returns</span>
 
 Void
 
 
+### DirectedCommunication(int robotId, RobotMqttClient m)
+
+    DirectedCommunication directedComm = new DirectedCommunication(id, robotMqttClient);
+
+#### sendMessage(String msg, int distance)
+
+
+<span style="{{%sub_color%}}">Description</span>
+
+Sends a broadcast type message to robots at front within [-15,15] angle
+
+<span style="{{%sub_color%}}">Syntax</span>
+ 
+	directedComm.sendMessage(String msg, int distance);
+	directedComm.sendMessage(String msg);
+
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	String msg   : message to be passed
+	int distance : radius that will receive the broadcasted message.
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
 ## Indicators
 Indicators used signify various states of the robots. 
 
@@ -433,9 +433,9 @@ Set x and y cordinates.
 
 <span style="{{%sub_color%}}">Parameter</span>
 
-double x : x cordinate
-double y : y cordinate
-double heading : heading of cordinate
+	double x : x cordinate
+	double y : y cordinate
+	double heading : heading of cordinate
 
 <span style="{{%sub_color%}}">Returns</span>
 
@@ -485,7 +485,45 @@ Void
 
 #### rotate(int speed, int interval)
 
+<span style="{{%sub_color%}}">Description</span>
+
+Rotate virtual roboot with a given speed and interval.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	motion.rotate(int speed)
+	motion.rotate(int speed, int interval)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	int speed : speed of roataion
+	int interval : time interval for all steps to occur? 
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
 #### move(int leftSpeed, int rightSpeed, int interval)
+
+<span style="{{%sub_color%}}">Description</span>
+
+Move virtual roboot with a given speed and interval.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	motion.move(int leftSpeed, int rightSpeed, int interval)
+	motion.move(int leftSpeed, int rightSpeed)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	int leftSpeed : speed of left motor?
+	int rightSpeed : speed of right motor?
+	int interval : ................... 
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
 
 #### rotateDegree(int speed, float degree)
 
