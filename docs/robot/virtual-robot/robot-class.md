@@ -624,10 +624,63 @@ double
 
 #### robotCreate(double x, double y, double heading)
 
+
+<span style="{{%sub_color%}}">Description</span>
+
+Create a robot in the simulator.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	robotMQTT.robotCreate(double x, double y,double heading)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	double x : position x cordinate
+	double y : position y cordinate
+	double heading : heading of the robot
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
 #### subscribe(mqttTopic key, String topic) 
+
+<span style="{{%sub_color%}}">Description</span>
+
+Subsribe to a topic.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	robotMQTT.subscribe(mqttTopic key, String topic)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	mqttTopic key :...... 
+	String topic  : topic to subscribe 
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
 
 #### handleSubscription(Robot r, MqttMsg m)
 
+
+<span style="{{%sub_color%}}">Description</span>
+
+Handle the mqtt subsription of the robots.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	robotMQTT.handleSubscription(Robot r, MqttMsg m)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	Robot r : considerd robot
+	Mqttmsg m: topic and message (Calling out various functions through MQTT)
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
 
 
 
