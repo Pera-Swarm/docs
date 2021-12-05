@@ -170,31 +170,6 @@ swarm.robot.types.RGBColorType
 
 ## Communication
 
-### DirectedCommunication(int robotId, RobotMqttClient m)
-
-    DirectedCommunication directedComm = new DirectedCommunication(id, robotMqttClient);
-
-#### sendMessage(String msg, int distance)
-
-
-<span style="{{%sub_color%}}">Description</span>
-
-Sends message through MQTT.
-
-<span style="{{%sub_color%}}">Syntax</span>
- 
-	directedComm.sendMessage(String msg, int distance);
-	directedComm.sendMessage(String msg);
-
-
-<span style="{{%sub_color%}}">Parameter</span>
-
-	String msg   : message to be passed
-	int distance : distance  
-
-<span style="{{%sub_color%}}">Returns</span>
-
-Void
 
 ### SimpleCommunication(int robotId, RobotMqttClient m)
 
@@ -205,7 +180,7 @@ Void
 
 <span style="{{%sub_color%}}">Description</span>
 
-Sends message through MQTT.
+Broadcasts message to robots within the defined radius.
 
 <span style="{{%sub_color%}}">Syntax</span>
  
@@ -216,13 +191,38 @@ Sends message through MQTT.
 <span style="{{%sub_color%}}">Parameter</span>
 
 	String msg   : message to be passed
-	int distance : distance  
+	int distance : radius that will receive the broadcasted message
 
 <span style="{{%sub_color%}}">Returns</span>
 
 Void
 
 
+### DirectedCommunication(int robotId, RobotMqttClient m)
+
+    DirectedCommunication directedComm = new DirectedCommunication(id, robotMqttClient);
+
+#### sendMessage(String msg, int distance)
+
+
+<span style="{{%sub_color%}}">Description</span>
+
+Sends a broadcast type message to robots at front within [-15,15] angle
+
+<span style="{{%sub_color%}}">Syntax</span>
+ 
+	directedComm.sendMessage(String msg, int distance);
+	directedComm.sendMessage(String msg);
+
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	String msg   : message to be passed
+	int distance : radius that will receive the broadcasted message.
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
 ## Indicators
 Indicators used signify various states of the robots. 
 
@@ -433,9 +433,9 @@ Set x and y cordinates.
 
 <span style="{{%sub_color%}}">Parameter</span>
 
-double x : x cordinate
-double y : y cordinate
-double heading : heading of cordinate
+	double x : x cordinate
+	double y : y cordinate
+	double heading : heading of cordinate
 
 <span style="{{%sub_color%}}">Returns</span>
 
@@ -485,24 +485,136 @@ Void
 
 #### rotate(int speed, int interval)
 
+<span style="{{%sub_color%}}">Description</span>
+
+Rotate virtual roboot with a given speed and interval.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	motion.rotate(int speed)
+	motion.rotate(int speed, int interval)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	int speed : speed of roataion
+	int interval : time interval for all steps to occur? 
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
 #### move(int leftSpeed, int rightSpeed, int interval)
+
+<span style="{{%sub_color%}}">Description</span>
+
+Move virtual roboot with a given speed and interval.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	motion.move(int leftSpeed, int rightSpeed, int interval)
+	motion.move(int leftSpeed, int rightSpeed)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	int leftSpeed : speed of left motor?
+	int rightSpeed : speed of right motor?
+	int interval : ................... 
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
 
 #### rotateDegree(int speed, float degree)
 
+//To be implemented
+
 #### moveDistance(int speed, float distance)
+
+//To be implemented
 
 #### goToGoal(double targetX, double targetY, int velocity)
 
+<span style="{{%sub_color%}}">Description</span>
+
+Move virtual robot to defined location
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	motion.gotoGoal(double targetX, int targetY, int velocity,in t interval )
+	motion.gotoGoal(double targetX, int targetY, int velocity)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	double targetX : target x coordinate
+	double targetY : target y coordinate
+	int velocity   : velcoity of robot
+	int interval   : ............................   
+
+<span style="{{%sub_color%}}">Returns</span>
+
+boolean
+
 #### isSpeedInRange(int speed)
 
-#### PID(double e)
+<span style="{{%sub_color%}}">Description</span>
+
+Check if given speed is in acceptable range (if speed within ROBOT_SPEED_MIN && ROBOT_SPEED_MAX).
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	motion.isSpeedInRange(int speed)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	int speed : Speed of the robot 
+
+<span style="{{%sub_color%}}">Returns</span>
+
+boolean
 
 #### delay(int interval)
 
+<span style="{{%sub_color%}}">Description</span>
+
+Delay to hold thread.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	motion.delay(int interval)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	int interval : sleep for a defined interval  
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
+<!------ Is this definiton correct? ----->
 #### getSlope(double x1, double y1, double x2, double y2)
 
-#### debug(String msg, int level)
+<span style="{{%sub_color%}}">Description</span>
 
+Angle in degrees between two points.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	motion.getSlop(idouble x1, double y1, double x2, double y2)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	double x1 : start x cordinate
+	double y1 : start y cordinate
+	double x2 : goal x cordinate
+	double y2 : goal y cordinate
+
+<span style="{{%sub_color%}}">Returns</span>
+
+double
+
+#### debug(String msg, int level)
+<!--------Is this part of the documentation--------->
 
 
 
@@ -512,10 +624,63 @@ Void
 
 #### robotCreate(double x, double y, double heading)
 
+
+<span style="{{%sub_color%}}">Description</span>
+
+Create a robot in the simulator.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	robotMQTT.robotCreate(double x, double y,double heading)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	double x : position x cordinate
+	double y : position y cordinate
+	double heading : heading of the robot
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
+
 #### subscribe(mqttTopic key, String topic) 
+
+<span style="{{%sub_color%}}">Description</span>
+
+Subsribe to a topic.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	robotMQTT.subscribe(mqttTopic key, String topic)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	mqttTopic key :...... 
+	String topic  : topic to subscribe 
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
 
 #### handleSubscription(Robot r, MqttMsg m)
 
+
+<span style="{{%sub_color%}}">Description</span>
+
+Handle the mqtt subsription of the robots.
+
+<span style="{{%sub_color%}}">Syntax</span>
+
+	robotMQTT.handleSubscription(Robot r, MqttMsg m)
+
+<span style="{{%sub_color%}}">Parameter</span>
+
+	Robot r : considerd robot
+	Mqttmsg m: topic and message (Calling out various functions through MQTT)
+
+<span style="{{%sub_color%}}">Returns</span>
+
+Void
 
 
 
