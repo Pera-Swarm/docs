@@ -3,10 +3,10 @@ layout: default
 parent: Physical Robot
 grand_parent: Robots
 title: Color Sensor Library
-nav_order: 3
+nav_order: 4
 permalink: robot/physical-robot/color_library
 
-gh_link: docs/robot/physical-robot/colorSensor.md
+gh_link: docs/robot/physical-robot/4_colorSensor.md
 ---
 
 # Color Sensor Library

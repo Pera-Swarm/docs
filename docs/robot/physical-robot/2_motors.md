@@ -3,10 +3,10 @@ layout: default
 parent: Physical Robot
 grand_parent: Robots
 title: Motor Library
-nav_order: 1
+nav_order: 2
 permalink: robot/physical-robot/motor_library
 
-gh_link: docs/robot/physical-robot/motors.md
+gh_link: docs/robot/physical-robot/2_motors.md
 ---
 
 # Motor Library

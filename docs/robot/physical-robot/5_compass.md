@@ -3,10 +3,10 @@ layout: default
 parent: Physical Robot
 grand_parent: Robots
 title: Compass Sensor Library
-nav_order: 4
+nav_order: 5
 permalink: robot/physical-robot/compass_library
 
-gh_link: docs/robot/physical-robot/compass.md
+gh_link: docs/robot/physical-robot/5_compass.md
 ---
 
 # Compass Sensor Library

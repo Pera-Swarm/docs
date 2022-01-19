@@ -3,10 +3,10 @@ layout: default
 parent: Physical Robot
 grand_parent: Robots
 title: IR Transceiver Library
-nav_order: 5
+nav_order: 6
 permalink: robot/physical-robot/ir_library
 
-gh_link: docs/robot/physical-robot/ir_sensors.md
+gh_link: docs/robot/physical-robot/6_ir_sensors.md
 ---
 
 # IR Transceiver Library

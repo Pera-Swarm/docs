@@ -3,10 +3,10 @@ layout: default
 parent: Physical Robot
 grand_parent: Robots
 title: Distance Sensor Library
-nav_order: 2
+nav_order: 3
 permalink: robot/physical-robot/distance_library
 
-gh_link: docs/robot/physical-robot/distanceSensors.md
+gh_link: docs/robot/physical-robot/3_distanceSensors.md
 ---
 
 # Distance Sensor Library
