@@ -181,7 +181,7 @@ gh_link: docs/communication/mqtt/mqtt_sensor.md
         5 readings are representing the distance readings of following 5 angles,
         relative to the heading direction of the robot.<br><br>
 
-        <dd>[-150, 90, 0, 90, 150]</dd>
+        <dd>[-150, -90, 0, 90, 150]</dd>
     </td></tr>
 </table>
 
@@ -189,7 +189,7 @@ gh_link: docs/communication/mqtt/mqtt_sensor.md
 ### /sensor/proximity
 
 <table>
-    <tr><td>Source</td><td> Physical Robot</td></tr>
+    <tr><td>Source</td><td> Robot (Physical, Virtual)</td></tr>
     <tr><td>Destination</td><td> Simulator </td></tr>
     <tr><td>Data Type</td><td> JSON</td></tr>
     <tr><td>Message Format</td><td>
