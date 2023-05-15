@@ -2,41 +2,51 @@
     padding-right: 4px;
 }
 
-.mw-100{
-    max-width: 100%!important;
-}
-.vh-75{
-    min-height: 75vh!important;
+.mw-100 {
+    max-width: 100% !important;
 }
 
-.fa-13{
+.vh-75 {
+    min-height: 75vh !important;
+}
+
+.fa-13 {
     font-size: 14pt !important;
 }
 
-table .highlighter-rouge{
+table .highlighter-rouge {
     border: none;
     margin: 10px;
 }
 
-.highlighter-rouge{
+.highlighter-rouge {
     border: 1px solid gray;
     margin: 20px;
 }
 
-code{
+code {
     padding: 16px !important;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     padding-top: 16px;
     padding-bottom: 8px;
 }
 
-.page ul{
+h5,
+h6 {
+    padding-top: 12px;
+    padding-bottom: 4px;
+}
+
+.page ul {
     padding-left: 20px;
 }
 
-#markdown-toc{
+#markdown-toc {
     /* border: 1px solid gray; */
     padding: 12px 24px;
 }
@@ -64,7 +74,7 @@ table {
     border-bottom: 2px solid #dee2e6;
 }
 
-.table tbody + tbody {
+.table tbody+tbody {
     border-top: 2px solid #dee2e6;
 }
 
@@ -94,7 +104,7 @@ table {
 .table-borderless th,
 .table-borderless td,
 .table-borderless thead th,
-.table-borderless tbody + tbody {
+.table-borderless tbody+tbody {
     border: 0;
 }
 
@@ -107,8 +117,8 @@ table {
 }
 
 .table-primary,
-.table-primary > th,
-.table-primary > td {
+.table-primary>th,
+.table-primary>td {
     background-color: #b8daff;
 }
 
@@ -116,14 +126,14 @@ table {
     background-color: #9fcdff;
 }
 
-.table-hover .table-primary:hover > td,
-.table-hover .table-primary:hover > th {
+.table-hover .table-primary:hover>td,
+.table-hover .table-primary:hover>th {
     background-color: #9fcdff;
 }
 
 .table-secondary,
-.table-secondary > th,
-.table-secondary > td {
+.table-secondary>th,
+.table-secondary>td {
     background-color: #d6d8db;
 }
 
@@ -131,14 +141,14 @@ table {
     background-color: #c8cbcf;
 }
 
-.table-hover .table-secondary:hover > td,
-.table-hover .table-secondary:hover > th {
+.table-hover .table-secondary:hover>td,
+.table-hover .table-secondary:hover>th {
     background-color: #c8cbcf;
 }
 
 .table-success,
-.table-success > th,
-.table-success > td {
+.table-success>th,
+.table-success>td {
     background-color: #c3e6cb;
 }
 
@@ -146,14 +156,14 @@ table {
     background-color: #b1dfbb;
 }
 
-.table-hover .table-success:hover > td,
-.table-hover .table-success:hover > th {
+.table-hover .table-success:hover>td,
+.table-hover .table-success:hover>th {
     background-color: #b1dfbb;
 }
 
 .table-info,
-.table-info > th,
-.table-info > td {
+.table-info>th,
+.table-info>td {
     background-color: #bee5eb;
 }
 
@@ -161,14 +171,14 @@ table {
     background-color: #abdde5;
 }
 
-.table-hover .table-info:hover > td,
-.table-hover .table-info:hover > th {
+.table-hover .table-info:hover>td,
+.table-hover .table-info:hover>th {
     background-color: #abdde5;
 }
 
 .table-warning,
-.table-warning > th,
-.table-warning > td {
+.table-warning>th,
+.table-warning>td {
     background-color: #ffeeba;
 }
 
@@ -176,14 +186,14 @@ table {
     background-color: #ffe8a1;
 }
 
-.table-hover .table-warning:hover > td,
-.table-hover .table-warning:hover > th {
+.table-hover .table-warning:hover>td,
+.table-hover .table-warning:hover>th {
     background-color: #ffe8a1;
 }
 
 .table-danger,
-.table-danger > th,
-.table-danger > td {
+.table-danger>th,
+.table-danger>td {
     background-color: #f5c6cb;
 }
 
@@ -191,14 +201,14 @@ table {
     background-color: #f1b0b7;
 }
 
-.table-hover .table-danger:hover > td,
-.table-hover .table-danger:hover > th {
+.table-hover .table-danger:hover>td,
+.table-hover .table-danger:hover>th {
     background-color: #f1b0b7;
 }
 
 .table-light,
-.table-light > th,
-.table-light > td {
+.table-light>th,
+.table-light>td {
     background-color: #fdfdfe;
 }
 
@@ -206,14 +216,14 @@ table {
     background-color: #ececf6;
 }
 
-.table-hover .table-light:hover > td,
-.table-hover .table-light:hover > th {
+.table-hover .table-light:hover>td,
+.table-hover .table-light:hover>th {
     background-color: #ececf6;
 }
 
 .table-dark,
-.table-dark > th,
-.table-dark > td {
+.table-dark>th,
+.table-dark>td {
     background-color: #c6c8ca;
 }
 
@@ -221,14 +231,14 @@ table {
     background-color: #b9bbbe;
 }
 
-.table-hover .table-dark:hover > td,
-.table-hover .table-dark:hover > th {
+.table-hover .table-dark:hover>td,
+.table-hover .table-dark:hover>th {
     background-color: #b9bbbe;
 }
 
 .table-active,
-.table-active > th,
-.table-active > td {
+.table-active>th,
+.table-active>td {
     background-color: rgba(0, 0, 0, 0.075);
 }
 
@@ -236,8 +246,8 @@ table {
     background-color: rgba(0, 0, 0, 0.075);
 }
 
-.table-hover .table-active:hover > td,
-.table-hover .table-active:hover > th {
+.table-hover .table-active:hover>td,
+.table-hover .table-active:hover>th {
     background-color: rgba(0, 0, 0, 0.075);
 }
 
@@ -284,7 +294,8 @@ table {
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar;
     }
-    .table-responsive-sm > .table-bordered {
+
+    .table-responsive-sm>.table-bordered {
         border: 0;
     }
 }
@@ -297,7 +308,8 @@ table {
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar;
     }
-    .table-responsive-md > .table-bordered {
+
+    .table-responsive-md>.table-bordered {
         border: 0;
     }
 }
@@ -310,7 +322,8 @@ table {
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar;
     }
-    .table-responsive-lg > .table-bordered {
+
+    .table-responsive-lg>.table-bordered {
         border: 0;
     }
 }
@@ -323,7 +336,8 @@ table {
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar;
     }
-    .table-responsive-xl > .table-bordered {
+
+    .table-responsive-xl>.table-bordered {
         border: 0;
     }
 }
@@ -336,28 +350,31 @@ table {
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.table-responsive > .table-bordered {
+.table-responsive>.table-bordered {
     border: 0;
 }
 
 
 .display-1 {
-  font-size: 6rem;
-  font-weight: 300;
-  line-height: 1.2;
+    font-size: 6rem;
+    font-weight: 300;
+    line-height: 1.2;
 }
+
 .display-2 {
-  font-size: 5.5rem;
-  font-weight: 300;
-  line-height: 1.2;
+    font-size: 5.5rem;
+    font-weight: 300;
+    line-height: 1.2;
 }
+
 .display-3 {
-  font-size: 4.5rem;
-  font-weight: 300;
-  line-height: 1.2;
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.2;
 }
+
 .display-4 {
-  font-size: 3.5rem;
-  font-weight: 300;
-  line-height: 1.2;
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
 }

@@ -10,11 +10,11 @@ permalink: /
 
 
 - [Swarm Simulator](/docs/simulator/)
-- [Robot Firmware]()
-- [Robot Design]()
-- [Visualizer]()
-- [Localization System]()
-- [Communication Protocols]()
+- [Robot Firmware](/docs/robot/firmware/)
+- [Robot Design](/docs/robot/hardware/intro/)
+- [Visualizer](/docs/visualizer/)
+- [Localization System](/docs/localization/)
+- [Communication Protocols](/docs/communication/)
 
 
 
