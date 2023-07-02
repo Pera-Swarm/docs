@@ -16,7 +16,7 @@ gh_link: docs/communication/mqtt/mqtt_config.md
 {:toc}
 
 
-### /config/arena
+### /config/arena/
 
 <table>
     <tr><td>Source</td><td> Simulator </td></tr>
