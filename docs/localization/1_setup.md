@@ -5,8 +5,10 @@ title: Setup
 nav_order: 1
 permalink: localization/setup/
 
-gh_link: docs/localization/setup.md
+gh_link: docs/localization/1_setup.md
 ---
+
+# Setup 
 
 This is run on a Raspberry Pi computer. With the help of default Raspberry Pi camera, this codebase can act as the localization system of the hardware robots.
 

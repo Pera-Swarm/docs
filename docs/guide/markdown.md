@@ -114,7 +114,7 @@ end
 
 <span style="color:orange; padding-bottom:0;" >Markdown Syntax:</span>
 ```md
-* * *
+---
 ```
 
 ### Here is an unordered list:

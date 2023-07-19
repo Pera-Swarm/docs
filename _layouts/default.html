@@ -29,7 +29,7 @@ layout: table_wrappers
 
                 {% if page.has_children == true and page.has_toc != false %}
                 <div class="pt-3">
-                    <h2 class="text-delta">Table of contents</h2>
+                    <h5 class="text-delta">Table of contents</h5>
                     <ul>
                         {%- assign children_list = pages_list | where: "parent", page.title | where: "grand_parent",
                         page.parent -%}

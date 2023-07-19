@@ -10,6 +10,12 @@ gh_link: docs/robots/obstacle/v1/hardware/1_intro.md
 ---
 
 ## Obstacle Bot Intro
+{: .no_toc }
+
+##### Table of content
+{: .no_toc }
+- TOC
+{:toc}
 
 {% include thumbnail.html src="/docs/assets/images/obstacle-bot/pictures.jpg" alt="Obstacle Bot Hardware" %}
 

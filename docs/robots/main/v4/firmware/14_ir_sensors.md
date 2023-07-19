@@ -14,7 +14,7 @@ gh_link: docs/robots/main/v4/firmware/14_ir_sensors.md
 
 {% include alert.html message="Under Construction" type="alert-primary" %}
 
-### Table of content
+##### Table of content
 {: .no_toc }
 - TOC
 {:toc}

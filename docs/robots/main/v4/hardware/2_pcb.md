@@ -12,6 +12,11 @@ gh_link: docs/robots/main/v4/hardware/2_pcb.md
 # PCB
 {: .no_toc }
 
+##### Table of content
+{: .no_toc }
+- TOC
+{:toc}
+
 ## Main PCB
 
 ### Top Layer

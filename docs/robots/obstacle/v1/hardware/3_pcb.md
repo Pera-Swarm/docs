@@ -12,5 +12,7 @@ gh_link: docs/robots/obstacle/v1/hardware/3_pcb.md
 # PCB
 {: .no_toc }
 
+{% include alert.html message="Under Construction" type="alert-primary" %}
+
 ## Main PCB
 {% include thumbnail.html src="/docs/assets/images/obstacle-bot/pcb.jpg" alt="Main PCB" %}

@@ -12,7 +12,7 @@ gh_link: docs/robots/main/v4/firmware/15_neopixel.md
 # Neopixel LED Library
 {: .no_toc }
 
-### Table of content
+##### Table of content
 {: .no_toc }
 
 - TOC

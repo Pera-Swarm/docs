@@ -12,7 +12,7 @@ gh_link: docs/robots/main/v4/firmware/2_setupInstructions.md
 # Firmware Setup Guide
 {: .no_toc }
 
-### Table of content
+##### Table of content
 {: .no_toc }
 - TOC
 {:toc}

@@ -12,6 +12,10 @@ gh_link: docs/robots/main/v4/hardware/4_diagrams.md
 # Design Diagrams
 {: .no_toc }
 
+##### Table of content
+{: .no_toc }
+- TOC
+{:toc}
 
 ## Battery Pack
 

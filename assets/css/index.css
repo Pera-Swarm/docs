@@ -28,6 +28,10 @@ code {
     padding: 16px !important;
 }
 
+tr code {
+    padding: 4px !important;
+}
+
 h1,
 h2,
 h3,

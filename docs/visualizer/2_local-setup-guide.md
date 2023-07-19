@@ -14,8 +14,6 @@ This is a web-based 3d visualizer interface for the Swarm Simulator developed fo
 
 You can view the simulator from here [https://pera-swarm.github.io/visualizer](https://pera-swarm.github.io/visualizer)
 
-![Webpack CI](https://github.com/Pera-Swarm/visualizer/workflows/Webpack%20CI/badge.svg)
-
 A basic boilerplate for a Three.js project including the use of Webpack and ES6 syntax via Babel.
 
 ## Project Structure

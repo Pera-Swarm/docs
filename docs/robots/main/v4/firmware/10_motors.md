@@ -12,7 +12,7 @@ gh_link: docs/robots/main/v4/firmware/10_motors.md
 # Motor Library
 {: .no_toc }
 
-### Table of content
+##### Table of content
 {: .no_toc }
 - TOC
 {:toc}

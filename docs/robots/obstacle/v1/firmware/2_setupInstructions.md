@@ -12,7 +12,7 @@ gh_link: docs/robots/obstacle/v1/firmware/2_setupInstructions.md
 # Firmware Setup Guide
 {: .no_toc }
 
-### Table of content
+##### Table of content
 {: .no_toc }
 - TOC
 {:toc}

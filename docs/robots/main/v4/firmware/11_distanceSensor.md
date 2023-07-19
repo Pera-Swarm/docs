@@ -12,7 +12,7 @@ gh_link: docs/robots/main/v4/firmware/11_distanceSensors.md
 # Distance Sensor Library
 {: .no_toc }
 
-### Table of content
+##### Table of content
 {: .no_toc }
 
 - TOC

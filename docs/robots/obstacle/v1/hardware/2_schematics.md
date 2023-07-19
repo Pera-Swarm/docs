@@ -11,6 +11,8 @@ gh_link: docs/robots/obstacle/v1/hardware/2_schematics.md
 
 # Schematics Diagrams
 
+{% include alert.html message="Under Construction" type="alert-primary" %}
+
 ### Main Board
 
 {% include thumbnail.html src="/docs/assets/images/obstacle-bot/schemetic.png" alt="Main Board Schematics Diagram" %}
