@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: Firmware
-grand_parent: Virtual Robot (v1)
+grand_parent: Virtual Robots
 title: Robot Class Overview
 nav_order: 3
 permalink: robots/virtual/firmware/v1/robot-class
@@ -66,8 +66,7 @@ Double
 
 <span style="{{ sub_color }}">Example Code</span>
 
-<----------Shall we add some code snippet like this for each method ?------------->
-
+<!-- Shall we add some code snippet like this for each method -->
 
 {% highlight java %}
 package robotImplementations;

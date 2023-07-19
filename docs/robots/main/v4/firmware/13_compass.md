@@ -1,16 +1,18 @@
 ---
 layout: default
 parent: Firmware
-grand_parent: Main Robot (v2)
+grand_parent: Main Robots
 title: Compass Sensor Library
-nav_order: 5
-permalink: robots/v2/firmware/compass_library
+nav_order: 13
+permalink: robots/v4/firmware/compass_library
 
-gh_link: docs/robots/main/v2/firmware/5_compass.md
+gh_link: docs/robots/main/v4/firmware/13_compass.md
 ---
 
 # Compass Sensor Library
 {: .no_toc }
+
+{% include alert.html message="Under Construction" type="alert-primary" %}
 
 ### Table of content
 {: .no_toc }

@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Firmware
-parent: Obstacle Robot (v1)
+parent: Obstacle Robots
 permalink: robots/obstacle-robot/v1/firmware/
 has_children: true
-has_toc: true
-nav_order: 1
+has_toc: false
+
 ---
 
 ## Obstacle Bot Firmware
 
-(Under Development)
+{% include alert.html message="Under Construction" type="alert-primary" %}

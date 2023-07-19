@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: Firmware
-grand_parent: Virtual Robot (v1)
+grand_parent: Virtual Robots
 title: Setup Guide
 nav_order: 1
 permalink: robots/virtual/firmware/v1/setup-guide
@@ -44,8 +44,7 @@ If you are interested in only the robot functionalities, not the core functional
 
 You need to fork and clone the repository, [github.com/Pera-Swarm/java-robot](https://github.com/Pera-Swarm/java-robot){:target="_blank"} and implement the *Robot Class* as provided examples.
 
-<!-- TODO: @Nuwan, can you write this part? -->
-
+{% include alert.html message="Remaining Under Construction" type="alert-primary" %}
 
 ## Additional Readings
 

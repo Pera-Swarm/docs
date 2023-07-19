@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Firmware
-parent: Virtual Robot (v1)
+parent: Virtual Robots
 has_children: true
-permalink: robots/virtual/firmware/v1/
+permalink: robots/virtual/v1/firmware/
 
 ---

@@ -1,16 +1,25 @@
 ---
 layout: default
 parent: Firmware
-grand_parent: Main Robot (v2)
-title: Robot Firmware Architecture
+grand_parent: Main Robots
+title: Firmware Architecture
 nav_order: 1
-permalink: robots/v2/firmware/intro
+permalink: robots/v4/firmware/intro
 
-gh_link: docs/robots/main/v2/firmware/1_intro.md
+gh_link: docs/robots/main/v4/firmware/1_intro.md
 ---
 
-# Robot Firmware Architecture
+# Firmware Architecture
+{: .no_toc }
 
+### Table of content
+{: .no_toc }
+- TOC
+{:toc}
+
+----
+
+### Build Tool: PlatformIO
 The firmware of the robot was implemented using [PlatformIO](https://platformio.org/), based on the ESP32 wrapper of the Arduino Framework. PlatformIO environment is available on almost all major IDEs, and once installed, it will do all the dependency management for you.
 
 You can download the latest firmware from the below link:
@@ -116,12 +125,12 @@ There are a few sample implementations are available from below links:
 - [Random Move Robot](https://github.com/Pera-Swarm/firmware/blob/master/firmware/algorithms/algorithm_moveRobot.cpp){:target="_blank"}
 - [Color Ripple Algorithm](https://github.com/Pera-Swarm/firmware/blob/master/firmware/algorithms/algorithm_colorRipple.cpp){:target="_blank"}
 
----
+### Finite State Machine Model 
 
 The following image, the **Finite State Machine** describes when and how each function in the algorithm template will be executed.  
 
-![Robot State Machine](/docs/assets/images/firmware/robotStateMachine.jpg)
 
+{% include thumbnail.html src="/docs/assets/images/firmware/robotStateMachine.jpg" alt="Robot State Machine Model of the Robot" %}
 
 ```cpp
 // Algorithm setup

@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Hardware
-parent: Main Robot (v2)
+parent: Main Robots
 has_children: true
-permalink: robots/v2/hardware/
+permalink: robots/v4/hardware/
 
 ---

@@ -1,6 +1,6 @@
 {% include page_tree_builder.html pages=site.html_pages %}
 
-<div class="sidebar-wrap overflow-hidden">
+<div class="d-none sidebar-wrap overflow-hidden">
     <div class="sidebar height-full overflow-y-scroll overflow-x-hidden">
         <div class="header d-flex flex-column p-3 text-center">
             <div class="title pb-1">
@@ -12,7 +12,7 @@
 
             {% if site.search_enabled -%}
             <form class="search pt-2" action="/search.html" method="get" autocomplete="off">
-                <input class="form-control input-block input-sm" type="text" name="q" placeholder="Search docs..."/>
+                <input class="form-control input-block input-sm" type="text" name="q" placeholder="Search docs..." />
             </form>
             {% endif -%}
         </div>
@@ -20,7 +20,8 @@
             {%- for node in pages_list -%}
             {%- if node.parent == nil -%}
             {%- unless node.nav_exclude -%}
-            <a class="caption d-block text-uppercase no-wrap px-2 py-0 {% if page.url == node.url %} active{% endif %}" href="{{ node.permalink | relative_url }}">
+            <a class="caption d-block text-uppercase no-wrap px-2 py-0 {% if page.url == node.url %} active{% endif %}"
+                href="{{ node.permalink | relative_url }}">
                 {{ node.title }}
             </a>
 
@@ -30,19 +31,111 @@
                 <!-- Secondary Level Links: Parents -->
                 {%- for child in children_list -%}
                 {%- unless child.nav_exclude -%}
-                <li class="toc level-1 {% if page.url == child.url or page.parent == child.title %} active{% endif %}" data-sort="{{ child.nav_order }}" data-level="1">
-                    <a class="d-flex flex-items-baseline {% if page.url == child.url %} active{% endif %}" href="{{ child.url | relative_url }}">
+                <li class="toc level-1 {% if page.url == child.url or page.parent == child.title %} active{% endif %}"
+                    data-sort="{{ child.nav_order }}" data-level="1">
+                    <a class="d-flex flex-items-baseline {% if page.url == child.url %} active{% endif %}"
+                        href="{{ child.url | relative_url }}">
                         {{ child.title }}
                     </a>
 
                     {%- if child.has_children -%}
-                    {%- assign grand_children_list = pages_list | where: "parent", child.title | where: "grand_parent", node.title -%}
+                    {%- assign grand_children_list = pages_list | where: "parent", child.title | where: "grand_parent",
+                    node.title -%}
                     <ul>
                         <!-- Third Level Links: Children -->
                         {%- for grand_child in grand_children_list -%}
                         {%- unless grand_child.nav_exclude -%}
-                        <li class="toc level-2 {% if page.url == grand_child.url %} active{% endif %}" data-sort="1" data-level="2">
-                            <a class="pl-3 d-flex flex-items-baseline {% if page.url == grand_child.url %} active{% endif %}" href="{{ grand_child.url | relative_url }}">
+                        <li class="toc level-2 {% if page.url == grand_child.url %} active{% endif %}" data-sort="1"
+                            data-level="2">
+                            <a class="pl-3 d-flex flex-items-baseline {% if page.url == grand_child.url %} active{% endif %}"
+                                href="{{ grand_child.url | relative_url }}">
+                                {{ grand_child.title }}
+                            </a>
+                        </li>
+                        {%- endunless -%}
+                        {%- endfor -%}
+                    </ul>
+                    {%- endif -%}
+                </li>
+                {%- endunless -%}
+                {%- endfor -%}
+            </ul>
+            {%- endif -%}
+
+            {%- endunless -%}
+            {%- endif -%}
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+
+
+<div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white sidebar-wrap overflow-hidden">
+    <!-- <a href="/" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+        <svg class="bi me-2" width="30" height="24">
+            <use xlink:href="#bootstrap" />
+        </svg>
+        <span class="fs-5 fw-semibold">List group</span>
+    </a>
+    <div class="list-group list-group-flush border-bottom scrollarea">
+        <a href="#" class="list-group-item list-group-item-action active py-3 lh-tight" aria-current="true">
+            <div class="d-flex w-100 align-items-center justify-content-between">
+                <strong class="mb-1">List group item heading</strong>
+                <small>Wed</small>
+            </div>
+            <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+        </a>
+    </div> -->
+
+    <div class="sidebar height-full overflow-y-scroll overflow-x-hidden">
+        <div class="header d-flex flex-column p-3 text-center">
+            <div class="title pb-1">
+                <a class="h4 no-underline py-1 px-2 rounded-1" href="{{ site.baseurl }}/" title="">
+                    <i class="fa fa-home mr-2 fa-13"></i>{{ site.title }}
+                </a>
+            </div>
+            {% if site.search_enabled -%}
+            <form class="search pt-2" action="/search.html" method="get" autocomplete="off">
+                <input class="form-control input-block input-sm" type="text" name="q" placeholder="Search docs..." />
+            </form>
+            {% endif -%}
+        </div>
+        <div class="toctree py-2" data-spy="affix" role="navigation" aria-label="main navigation">
+            {%- for node in pages_list -%}
+            {%- if node.parent == nil -%}
+            {%- unless node.nav_exclude -%}
+            <a class="caption d-block text-uppercase no-wrap px-2 py-0 {% if page.url == node.url %} active{% endif %}"
+                href="{{ node.permalink | relative_url }}">
+                {{ node.title }}
+
+                {%- if node.version != nil -%}<span class="small ms-1 font-monospace">({{node.version}})</span>{%- endif
+                -%}
+            </a>
+
+            {%- if node.has_children -%}
+            {%- assign children_list = pages_list | where: "parent", node.title -%}
+            <ul>
+                <!-- Secondary Level Links: Parents -->
+                {%- for child in children_list -%}
+                {%- unless child.nav_exclude -%}
+                <li class="toc level-1 {% if page.url == child.url or page.parent == child.title %} active{% endif %}"
+                    data-sort="{{ child.nav_order }}" data-level="1">
+                    <a class="d-flex flex-items-baseline {% if page.url == child.url %} active{% endif %}"
+                        href="{{ child.url | relative_url }}">
+                        {{ child.title }}
+                    </a>
+
+                    {%- if child.has_children -%}
+                    {%- assign grand_children_list = pages_list | where: "parent", child.title | where: "grand_parent",
+                    node.title -%}
+                    <ul>
+                        <!-- Third Level Links: Children -->
+                        {%- for grand_child in grand_children_list -%}
+                        {%- unless grand_child.nav_exclude -%}
+                        <li class="toc level-2 {% if page.url == grand_child.url %} active{% endif %}" data-sort="1"
+                            data-level="2">
+                            <a class="pl-3 d-flex flex-items-baseline {% if page.url == grand_child.url %} active{% endif %}"
+                                href="{{ grand_child.url | relative_url }}">
                                 {{ grand_child.title }}
                             </a>
                         </li>
