@@ -22,6 +22,8 @@ gh_link: docs/robots/main/v4/firmware/1_intro.md
 ### Build Tool: PlatformIO
 The firmware of the robot was implemented using [PlatformIO](https://platformio.org/), based on the ESP32 wrapper of the Arduino Framework. PlatformIO environment is available on almost all major IDEs, and once installed, it will do all the dependency management for you.
 
+### Source Code
+
 You can download the latest firmware from the below link:
 - [Stable Release v4.2](https://github.com/Pera-Swarm/firmware)
 - [Development Version](https://github.com/Pera-Swarm/firmware/tree/dev)
@@ -30,7 +32,7 @@ You can download the latest firmware from the below link:
 
 Developers who want to model the *Swarm Behavioral Algorithms* doesn't need to worry about the implementations of the hardware. They can use the top level implementation, which be found in *firmware\algorithms\algorithm_template.cpp* of the firmware repository.
 
-### Template for the Algorithm Implementation
+### Algorithm Implementation Template
 ```cpp
 #include "algorithm.h"
 #include "config/global_variables.h"
