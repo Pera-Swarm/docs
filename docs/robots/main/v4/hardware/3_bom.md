@@ -1,12 +1,12 @@
 ---
 layout: default
 parent: Hardware
-grand_parent: Main Robot (v2)
+grand_parent: Main Robots
 title: Bill of Materials
 nav_order: 3
-permalink: robots/v2/hardware/bom/
+permalink: robots/v4/hardware/bom/
 
-gh_link: docs/robots/main/v2/hardware/3_bom.md
+gh_link: docs/robots/main/v4/hardware/3_bom.md
 ---
 
 # Bill of Materials

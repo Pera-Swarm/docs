@@ -1,10 +1,10 @@
 ---
 layout: default
 parent: Firmware
-grand_parent: Virtual Robot (v1)
+grand_parent: Virtual Robots
 title: Swarm Class Overview
 nav_order: 3
-permalink: robots/virtual/firmware/v1/swarm-class
+permalink: robots/virtual/v1/firmware/swarm-class/
 
 gh_link: docs/robots/virtual/v1/firmware/2_swarm-class.md
 ---
@@ -12,7 +12,9 @@ gh_link: docs/robots/virtual/v1/firmware/2_swarm-class.md
 # Swarm Class
 {: .no_toc }
 
-### Table of content
+{% include alert.html message="Under Construction" type="alert-primary" %}
+
+##### Table of content
 {: .no_toc }
 - TOC
 {:toc}

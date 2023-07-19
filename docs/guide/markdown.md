@@ -2,7 +2,7 @@
 layout: default
 title: Markdown Formats
 nav_order: 2
-permalink: documentation/markdown
+permalink: documentation/markdown/
 parent: Useful Links
 
 search_exclude: true
@@ -114,7 +114,7 @@ end
 
 <span style="color:orange; padding-bottom:0;" >Markdown Syntax:</span>
 ```md
-* * *
+---
 ```
 
 ### Here is an unordered list:

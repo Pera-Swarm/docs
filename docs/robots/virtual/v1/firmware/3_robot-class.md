@@ -1,10 +1,10 @@
 ---
 layout: default
 parent: Firmware
-grand_parent: Virtual Robot (v1)
+grand_parent: Virtual Robots
 title: Robot Class Overview
 nav_order: 3
-permalink: robots/virtual/firmware/v1/robot-class
+permalink: robots/virtual/v1/firmware/robot-class/
 
 gh_link: docs/robots/virtual/v1/firmware/3_robot-class.md
 ---
@@ -12,13 +12,12 @@ gh_link: docs/robots/virtual/v1/firmware/3_robot-class.md
 # Robot Class
 {: .no_toc }
 
-### Table of content
+##### Table of content
 {: .no_toc }
 - TOC
 {:toc}
 
 ---
-
 
 {% assign sub_color = "color: orange;" %}
 
@@ -66,8 +65,7 @@ Double
 
 <span style="{{ sub_color }}">Example Code</span>
 
-<----------Shall we add some code snippet like this for each method ?------------->
-
+<!-- Shall we add some code snippet like this for each method -->
 
 {% highlight java %}
 package robotImplementations;

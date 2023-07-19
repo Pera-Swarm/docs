@@ -1,18 +1,18 @@
 ---
 layout: default
 parent: Firmware
-grand_parent: Main Robot (v2)
+grand_parent: Main Robots
 title: Neopixel LED Library
-nav_order: 7
-permalink: robots/v2/firmware/neopixel_library
+nav_order: 15
+permalink: robots/v4/firmware/neopixel_library/
 
-gh_link: docs/robots/main/v2/firmware/7_neopixel.md
+gh_link: docs/robots/main/v4/firmware/15_neopixel.md
 ---
 
 # Neopixel LED Library
 {: .no_toc }
 
-### Table of content
+##### Table of content
 {: .no_toc }
 
 - TOC

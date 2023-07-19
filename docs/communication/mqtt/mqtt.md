@@ -3,7 +3,7 @@ layout: default
 parent: Communication
 title: MQTT
 nav_order: 1
-permalink: communication/mqtt
+permalink: communication/mqtt/
 has_children: true
 ---
 

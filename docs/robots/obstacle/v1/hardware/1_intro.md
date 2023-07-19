@@ -1,20 +1,23 @@
 ---
 layout: default
-title: Hardware
-parent: Obstacle Robot (v1)
-permalink: robots/obstacle-robot/v1/hardware
-has_children: true
-has_toc: true
-nav_order: 0
+parent: Hardware
+grand_parent: Obstacle Robots
+title: Intro
+nav_order: 1
+permalink: robots/obstacle-robot/v1/hardware/intro/
 
-gh_link: docs/robots/obstacle/v1/hardware/0_intro.md
+gh_link: docs/robots/obstacle/v1/hardware/1_intro.md
 ---
 
-## Obstacle Bot Hardware
-
+## Obstacle Bot Intro
 {: .no_toc }
 
-![](/docs/assets/images/obstacle-bot/pictures.jpg)
+##### Table of content
+{: .no_toc }
+- TOC
+{:toc}
+
+{% include thumbnail.html src="/docs/assets/images/obstacle-bot/pictures.jpg" alt="Obstacle Bot Hardware" %}
 
 ### Hardware Specifications 
 

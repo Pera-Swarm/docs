@@ -1,10 +1,11 @@
 ---
 layout: default
-title: Virtual Robot (v1)
+title: Virtual Robots
 permalink: robots/virtual/v1/
 has_children: true
 nav_order: 3
 has_toc: true
+version: v1
 
 gh_link: docs/robots/virtual/v1/index.md
 ---

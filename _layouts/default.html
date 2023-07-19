@@ -6,11 +6,12 @@ layout: table_wrappers
 
 <html lang="{{ site.lang | default: 'en-US' }}">
 {% include head.html %}
+
 <body>
     {% include sidebar.html %}
 
     <div class="content-wrap">
-        <div class="header d-flex flex-justify-between p-2 hide-lg hide-xl" aria-label="top navigation">
+        <div class="header d-flex flex-justify-between p-2 d-block d-md-none" aria-label="top navigation">
             <button id="toggle" aria-label="Toggle menu" class="btn-octicon p-2 m-0 text-white" type="button">
                 <i class="fa fa-bars"></i>
             </button>
@@ -23,23 +24,24 @@ layout: table_wrappers
             {% include breadcrumb.html %}
             <hr>
 
-            <div class="vh-75 px-3 page pb-5" role="main" itemscope="itemscope" itemtype="https://schema.org/Article">
+            <div class="vh-75 px-3 page pb-1" role="main" itemscope="itemscope" itemtype="https://schema.org/Article">
                 {{ content }}
 
                 {% if page.has_children == true and page.has_toc != false %}
                 <div class="pt-3">
-                    <h2 class="text-delta">Table of contents</h2>
+                    <h5 class="text-delta">Table of contents</h5>
                     <ul>
-                        {%- assign children_list = pages_list | where: "parent", page.title | where: "grand_parent", page.parent -%}
+                        {%- assign children_list = pages_list | where: "parent", page.title | where: "grand_parent",
+                        page.parent -%}
                         {% for child in children_list %}
                         <li>
-                            <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
+                            <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{
+                            child.summary }}{% endif %}
                         </li>
                         {% endfor %}
                     </ul>
                 </div>
                 {% endif %}
-
             </div>
 
             <!-- {% include pagination.html %} -->
@@ -48,9 +50,11 @@ layout: table_wrappers
             <div class="copyright text-center text-gray" role="contentinfo">
                 <i class="fa fa-copyright"></i>
                 <span class="time">{{ site.time | date: '%Y' }},</span>
-                <a class="text-gray" href="#" rel="noreferrer" target="_blank">Pera-Swarm - Department of Computer Engineering, University of Peradeniya</a>
-                <br/>
-                <span class="small">Version <a class="text-gray" href="#" rel="noreferrer" target="_blank">{{ site.version }}</a></span>
+                <a class="text-gray" href="#" rel="noreferrer" target="_blank">Pera-Swarm - Department of Computer
+                    Engineering, University of Peradeniya</a>
+                <br />
+                <span class="small">Version <a class="text-gray" href="#" rel="noreferrer" target="_blank">{{
+                        site.version }}</a></span>
             </div>
         </div>
     </div>
@@ -63,16 +67,22 @@ layout: table_wrappers
         <div class="addons d-flex flex-column height-full p-2 d-none">
             <dl>
                 <dt>GitHub</dt>
-                <dd><a href="https://github.com/Pera-Swarm/docs" title=""><i class="fa fa-github pr-1"></i> Homepage </a></dd>
-                <dd><a href="https://github.com/Pera-Swarm/docs/issues" title=""><i class="fa fa-question-circle-o pr-1"></i> Issues </a></dd>
-                <dd><a href="https://github.com/Pera-Swarm/docs/release" title=""><i class="fa fa-download pr-1"></i>Download</a></dd>
+                <dd><a href="https://github.com/Pera-Swarm/docs" title=""><i class="fa fa-github pr-1"></i> Homepage
+                    </a></dd>
+                <dd><a href="https://github.com/Pera-Swarm/docs/issues" title=""><i
+                            class="fa fa-question-circle-o pr-1"></i> Issues </a></dd>
+                <dd><a href="https://github.com/Pera-Swarm/docs/release" title=""><i
+                            class="fa fa-download pr-1"></i>Download</a></dd>
             </dl>
             <hr>
-            <div class="license f6 pb-2"><a href="{{ site.baseurl }}/" title="Pera-Swarm">This</a> is under the terms of <a href="https://github.com/Pera-Swarm/docs">MIT License</a>. </div>
+            <div class="license f6 pb-2"><a href="{{ site.baseurl }}/" title="Pera-Swarm">This</a> is under the terms of
+                <a href="https://github.com/Pera-Swarm/docs">MIT License</a>.
+            </div>
         </div>
     </div>
 
     {% include footer_scripts.html %}
 
 </body>
+
 </html>

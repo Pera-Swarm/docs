@@ -1,19 +1,20 @@
 ---
 layout: default
 parent: Firmware
-grand_parent: Main Robot (v2)
+grand_parent: Main Robots
 title: Distance Sensor Library
-nav_order: 3
-permalink: robots/v2/firmware/distance_library
+nav_order: 11
+permalink: robots/v4/firmware/distance_library/
 
-gh_link: docs/robots/main/v2/firmware/3_distanceSensors.md
+gh_link: docs/robots/main/v4/firmware/11_distanceSensors.md
 ---
 
 # Distance Sensor Library
 {: .no_toc }
 
-### Table of content
+##### Table of content
 {: .no_toc }
+
 - TOC
 {:toc}
 

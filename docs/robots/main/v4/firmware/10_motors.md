@@ -1,18 +1,18 @@
 ---
 layout: default
 parent: Firmware
-grand_parent: Main Robot (v2)
+grand_parent: Main Robots
 title: Motor Library
-nav_order: 2
-permalink: robots/v2/firmware/motor_library
+nav_order: 10
+permalink: robots/v4/firmware/motor_library/
 
-gh_link: docs/robots/main/v2/firmware/2_motors.md
+gh_link: docs/robots/main/v4/firmware/10_motors.md
 ---
 
 # Motor Library
 {: .no_toc }
 
-### Table of content
+##### Table of content
 {: .no_toc }
 - TOC
 {:toc}

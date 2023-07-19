@@ -3,9 +3,9 @@ layout: default
 parent: Localization
 title: Calibration
 nav_order: 2
-permalink: localization/calibration
+permalink: localization/calibration/
 
-gh_link: docs/localization/calibration.md
+gh_link: docs/localization/2_calibration.md
 ---
 
 # Calibration 
@@ -17,4 +17,4 @@ Details can be found from [here](https://mecaruco2.readthedocs.io/en/latest/note
 
 ### Mapping Calibration (mandatory)
 
-This part is under construction. Please come back later.
+{% include alert.html message="Under Construction" type="alert-primary" %}

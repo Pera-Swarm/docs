@@ -3,7 +3,7 @@ layout: default
 parent: Communication
 title: JSON
 nav_order: 2
-permalink: communication/json
+permalink: communication/json/
 has_children: true
 ---
 

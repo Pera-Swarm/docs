@@ -4,7 +4,7 @@ parent: MQTT
 grand_parent: Communication
 title: Robot
 nav_order: 1
-permalink: communication/mqtt/robot
+permalink: communication/mqtt/robot/
 
 gh_link: docs/communication/mqtt/mqtt_robot.md
 ---

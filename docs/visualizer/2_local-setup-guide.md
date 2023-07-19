@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: visualizer/local-setup-guide/
 parent: Visualizer
 title: Local Setup Guide
 nav_order: 2
@@ -12,8 +13,6 @@ gh_link: docs/blob/main/docs/visualizer/1_local-setup-guide.md
 This is a web-based 3d visualizer interface for the Swarm Simulator developed for the Pera Swarm project.
 
 You can view the simulator from here [https://pera-swarm.github.io/visualizer](https://pera-swarm.github.io/visualizer)
-
-![Webpack CI](https://github.com/Pera-Swarm/visualizer/workflows/Webpack%20CI/badge.svg)
 
 A basic boilerplate for a Three.js project including the use of Webpack and ES6 syntax via Babel.
 
