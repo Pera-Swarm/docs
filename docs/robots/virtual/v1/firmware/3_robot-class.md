@@ -4,7 +4,7 @@ parent: Firmware
 grand_parent: Virtual Robots
 title: Robot Class Overview
 nav_order: 3
-permalink: robots/virtual/firmware/v1/robot-class
+permalink: robots/virtual/firmware/v1/robot-class/
 
 gh_link: docs/robots/virtual/v1/firmware/3_robot-class.md
 ---

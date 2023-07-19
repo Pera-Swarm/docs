@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: visualizer/remote-access-guide/
 parent: Visualizer
 title: Remote Access Guide
 nav_order: 1

@@ -4,7 +4,7 @@ parent: Firmware
 grand_parent: Main Robots
 title: Color Sensor Library
 nav_order: 12
-permalink: robots/v4/firmware/color_library
+permalink: robots/v4/firmware/color_library/
 
 gh_link: docs/robots/main/v4/firmware/12_colorSensor.md
 ---

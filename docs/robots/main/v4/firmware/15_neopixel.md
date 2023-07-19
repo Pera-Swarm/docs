@@ -4,7 +4,7 @@ parent: Firmware
 grand_parent: Main Robots
 title: Neopixel LED Library
 nav_order: 15
-permalink: robots/v4/firmware/neopixel_library
+permalink: robots/v4/firmware/neopixel_library/
 
 gh_link: docs/robots/main/v4/firmware/15_neopixel.md
 ---

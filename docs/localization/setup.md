@@ -3,7 +3,7 @@ layout: default
 parent: Localization
 title: Setup
 nav_order: 1
-permalink: localization/setup
+permalink: localization/setup/
 
 gh_link: docs/localization/setup.md
 ---

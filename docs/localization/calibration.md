@@ -3,7 +3,7 @@ layout: default
 parent: Localization
 title: Calibration
 nav_order: 2
-permalink: localization/calibration
+permalink: localization/calibration/
 
 gh_link: docs/localization/calibration.md
 ---

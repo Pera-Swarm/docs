@@ -2,7 +2,7 @@
 layout: default
 title: Documentation Guide
 nav_order: 99
-permalink: documentation
+permalink: documentation/
 parent: Useful Links
 
 search_exclude: true

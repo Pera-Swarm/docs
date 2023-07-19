@@ -4,7 +4,7 @@ parent: Firmware
 grand_parent: Main Robots
 title: Compass Sensor Library
 nav_order: 13
-permalink: robots/v4/firmware/compass_library
+permalink: robots/v4/firmware/compass_library/
 
 gh_link: docs/robots/main/v4/firmware/13_compass.md
 ---

@@ -4,7 +4,7 @@ parent: Firmware
 grand_parent: Main Robots
 title: Distance Sensor Library
 nav_order: 11
-permalink: robots/v4/firmware/distance_library
+permalink: robots/v4/firmware/distance_library/
 
 gh_link: docs/robots/main/v4/firmware/11_distanceSensors.md
 ---

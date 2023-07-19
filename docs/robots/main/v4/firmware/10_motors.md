@@ -4,7 +4,7 @@ parent: Firmware
 grand_parent: Main Robots
 title: Motor Library
 nav_order: 10
-permalink: robots/v4/firmware/motor_library
+permalink: robots/v4/firmware/motor_library/
 
 gh_link: docs/robots/main/v4/firmware/10_motors.md
 ---

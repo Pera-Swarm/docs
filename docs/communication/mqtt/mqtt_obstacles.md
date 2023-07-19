@@ -4,7 +4,7 @@ parent: MQTT
 grand_parent: Communication
 title: Obstacles
 nav_order: 5
-permalink: communication/mqtt/obstacles
+permalink: communication/mqtt/obstacles/
 
 gh_link: docs/communication/mqtt/mqtt_obstacles.md
 ---

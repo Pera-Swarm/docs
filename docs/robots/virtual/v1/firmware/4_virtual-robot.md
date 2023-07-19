@@ -4,7 +4,7 @@ parent: Firmware
 grand_parent: Virtual Robots
 title: Implement a Virtual Robot
 nav_order: 4
-permalink: robots/virtual/firmware/v1/virtual-robot-class
+permalink: robots/virtual/firmware/v1/virtual-robot-class/
 
 gh_link: docs/robots/virtual/v1/firmware/4_virtual-robot.md
 ---

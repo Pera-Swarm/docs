@@ -4,7 +4,7 @@ parent: MQTT
 grand_parent: Communication
 title: Communication
 nav_order: 4
-permalink: communication/mqtt/comm
+permalink: communication/mqtt/comm/
 
 gh_link: docs/communication/mqtt/mqtt_communication.md
 ---

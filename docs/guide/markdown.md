@@ -2,7 +2,7 @@
 layout: default
 title: Markdown Formats
 nav_order: 2
-permalink: documentation/markdown
+permalink: documentation/markdown/
 parent: Useful Links
 
 search_exclude: true

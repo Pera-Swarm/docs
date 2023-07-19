@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: visualizer/local-setup-guide/
 parent: Visualizer
 title: Local Setup Guide
 nav_order: 2

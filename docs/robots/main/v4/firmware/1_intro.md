@@ -4,7 +4,7 @@ parent: Firmware
 grand_parent: Main Robots
 title: Firmware Architecture
 nav_order: 1
-permalink: robots/v4/firmware/intro
+permalink: robots/v4/firmware/intro/
 
 gh_link: docs/robots/main/v4/firmware/1_intro.md
 ---

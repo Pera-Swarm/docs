@@ -2,7 +2,7 @@
 layout: default
 title: Page Template
 nav_order: 1
-permalink: documentation/pages
+permalink: documentation/pages/
 parent: Useful Links
 
 search_exclude: true

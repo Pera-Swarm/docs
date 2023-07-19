@@ -4,7 +4,7 @@ parent: Firmware
 grand_parent: Obstacle Robots
 title: Firmware Architecture
 nav_order: 1
-permalink: robots/obstacle-robot/v1/firmware/intro
+permalink: robots/obstacle-robot/v1/firmware/intro/
 
 gh_link: docs/robots/obstacle/v1/firmware/1_intro.md
 ---

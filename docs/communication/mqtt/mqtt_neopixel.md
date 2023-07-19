@@ -4,7 +4,7 @@ parent: MQTT
 grand_parent: Communication
 title: NeoPixel LEDs
 nav_order: 7
-permalink: communication/mqtt/neopixel
+permalink: communication/mqtt/neopixel/
 
 gh_link: docs/communication/mqtt/mqtt_neopixel.md
 ---
