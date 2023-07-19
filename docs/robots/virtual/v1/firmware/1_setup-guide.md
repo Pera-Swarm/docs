@@ -4,7 +4,7 @@ parent: Firmware
 grand_parent: Virtual Robots
 title: Setup Guide
 nav_order: 1
-permalink: robots/virtual/firmware/v1/setup-guide/
+permalink: robots/virtual/v1/firmware/setup-guide/
 
 gh_link: docs/robots/virtual/v1/firmware/1_setup-guide.md
 ---
@@ -12,7 +12,7 @@ gh_link: docs/robots/virtual/v1/firmware/1_setup-guide.md
 # Setup Guide
 {: .no_toc }
 
-### Table of content
+##### Table of content
 {: .no_toc }
 - TOC
 {:toc}

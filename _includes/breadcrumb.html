@@ -10,6 +10,8 @@
 {%- for child in children_list -%}
 {%- if page.url == child.url or page.parent == child.title and page.parent == child.grade_parent -%}
 {%- assign second_level_url = child.url | relative_url -%}
+{%- else -%}
+{%- assign second_level_url = '../' -%}
 {%- endif -%}
 {%- endfor -%}
 {%- endif -%}
