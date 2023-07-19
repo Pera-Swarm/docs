@@ -8,7 +8,7 @@
 {%- if node.has_children -%}
 {%- assign children_list = pages_list | where: "parent", node.title -%}
 {%- for child in children_list -%}
-{%- if page.url == child.url or page.parent == child.title -%}
+{%- if page.url == child.url or page.parent == child.title and page.parent == child.grade_parent -%}
 {%- assign second_level_url = child.url | relative_url -%}
 {%- endif -%}
 {%- endfor -%}
@@ -49,6 +49,15 @@
         {% endif -%}
 
     </ul>
+
+    {% if page.gh_link -%}
+    <a class="text-decoration-none"
+        href="{{ site.gh_edit_repository }}/blob/{{ site.gh_edit_branch }}/{{ page.gh_link }}" title="Edit on GitHub"
+        rel="noreferrer" target="_blank">
+
+        <i class="fa fa-github fa-13"></i> Edit <span class="d-none d-md-inline">on GitHub</span>
+    </a>
+    {% endif -%}
 </div>
 
 {% endunless %}

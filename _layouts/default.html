@@ -42,17 +42,6 @@ layout: table_wrappers
                     </ul>
                 </div>
                 {% endif %}
-
-
-                {% if page.gh_link -%}
-                <div class="d-flex flex-row-reverse bd-highlight pt-5">
-                    <a class="edit"
-                        href="{{ site.gh_edit_repository }}/blob/{{ site.gh_edit_branch }}/{{ page.gh_link }}"
-                        title="Edit on GitHub" rel="noreferrer" target="_blank">
-                        <i class="fa fa-github fa-13"></i> Edit on GitHub
-                    </a>
-                </div>
-                {% endif -%}
             </div>
 
             <!-- {% include pagination.html %} -->
