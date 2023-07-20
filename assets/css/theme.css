@@ -5697,13 +5697,18 @@ p.explain .minibutton {
 
 .toctree a {
 	color: #fff;
-	padding: .5em
+	padding: .25em .5em;
 }
 
 .toctree .caption {
 	color: #55a5d9;
-	font-weight: 600;
-	line-height: 32px
+	font-weight: 500;
+	line-height: 32px;
+}
+
+.toctree ul {
+	margin-bottom: 0.5rem;
+	;
 }
 
 .toctree .fa {

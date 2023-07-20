@@ -19,5 +19,5 @@ permalink: /
 - [Localization System](/docs/localization/)
 - [Communication Protocols](/docs/communication/)
 
-
-[Visit GitHub Organization](https://github.com/Pera-Swarm){: .btn .fs-5 .mb-4 .mb-md-0 .mt-5 }
+## GitHub 
+- [Pera-Swarm GitHub Organization](https://github.com/Pera-Swarm)
