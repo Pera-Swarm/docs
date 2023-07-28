@@ -17,6 +17,7 @@ gh_link: docs/robots/virtual/v1/index.md
 
 The virtual robot instances were implemented using Java, in a Maven Build Environment.
 
-The implementation can be found in the GitHub repository, [github.com/Pera-Swarm/java-swarm-node](https://github.com/Pera-Swarm/java-swarm-node).
+The implementation can be found in the GitHub repository, [github.com/Pera-Swarm/robot-library-java](https://github.com/Pera-Swarm/robot-library-java).
+
 
 {: .no_toc }
