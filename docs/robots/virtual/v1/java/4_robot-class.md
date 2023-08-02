@@ -1,16 +1,18 @@
 ---
 layout: default
-parent: Firmware
+parent: Java Robot
 grand_parent: Virtual Robots
-title: Robot Class Overview
-nav_order: 3
+title: Robot Class
+nav_order: 4
 permalink: robots/virtual/v1/firmware/robot-class/
 
-gh_link: docs/robots/virtual/v1/firmware/3_robot-class.md
+gh_link: docs/robots/virtual/v1/java/3_robot-class.md
 ---
 
 # Robot Class
 {: .no_toc }
+
+This will guide the basic Methods available for a Java Virtual Robot implementations.
 
 ##### Table of content
 {: .no_toc }
@@ -64,62 +66,6 @@ None
 Double 
 
 <span style="{{ sub_color }}">Example Code</span>
-
-<!-- Shall we add some code snippet like this for each method -->
-
-{% highlight java %}
-package robotImplementations;
-import swarm.robot.VirtualRobot;
-public class ObstacleAvoidRobot extends VirtualRobot {
-
-    public ObstacleAvoidRobot(int id, double x, double y, double heading) {
-        super(id, x, y, heading);
-    }
-
-    public void setup() {
-        super.setup();
-    }
-
-    public void loop() throws Exception {
-        super.loop();
-
-        if(state==robotState.RUN) {
-            double dist = distSensor.getDistance();
-
-            if (dist < 15) {
-
-                // Generate a random number in [-1000,1000] range
-                // if even, rotate CW, otherwise rotate CCW an angle depends on the random number
-                int random = -1000 + ((int) ((Math.random() * 2000)));
-                int sign = (random % 2 == 0) ? 1 : -1;
-
-                System.out.println("\t Wall detected, go back and rotate " + ((sign > 0) ? "CW" : "CCW"));
-
-                // Go back a little
-                motion.move(-100, -100, 900);
-
-                // rotate
-                int loopCount = 0; // to avoid infinity loop
-                while (distSensor.getDistance() < 35 && loopCount < 5) {
-                    motion.rotate(50 * sign, 1000);
-                    loopCount++;
-                }
-                // TODO: This is a temp update to restrict the robot into arena
-                // if (coordinates.getX() >= 90) coordinates.setX(85);
-                // if (coordinates.getX() <= -90) coordinates.setX(-85);
-                // if (coordinates.getY() >= 90) coordinates.setY(85);
-                // if (coordinates.getY() <= -90) coordinates.setY(-85);
-
-                // rotate a little
-                motion.rotate(50 * sign, 500);
-
-            } else {
-                motion.move(100, 100, 1000);
-            }
-        }
-    }
-}
-{% endhighlight %}
 
 
 ### ProximitySensor(Robot robot, RobotMqttClient m) 
