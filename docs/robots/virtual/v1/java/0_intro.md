@@ -9,7 +9,7 @@ permalink: robots/virtual/v1/java/
 
 # Virtual Robot - Java Implementation
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0) [![Java CI with Maven](https://github.com/Pera-Swarm/java-robot/actions/workflows/java-ci.yml/badge.svg)](https://github.com/Pera-Swarm/java-robot/actions/workflows/java-ci.yml)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0) ![Library](https://img.shields.io/github/v/release/Pera-Swarm/robot-library-java?label=Library)
 
 ---
 
