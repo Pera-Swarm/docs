@@ -1,0 +1,89 @@
+---
+layout: default
+parent: Other
+title: Testing Environments
+nav_order: 1
+permalink: other/testing-environments
+
+gh_link: docs/other/testing.md
+---
+
+<h1>Testing</h1>
+
+<h3>Working Channels</h3>
+
+<p>Following channels are available with the default credentials. (Please request the credentials from
+  <a href="https://people.ce.pdn.ac.lk/students/e15/140/" target="_blank">@Nuwan</a>)
+</p>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th style="text-align: left">Status</th>
+        <th style="text-align: center">Channel</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: center">Server / IP</th>
+        <th style="text-align: left">Description</th>
+        <th style="text-align: center">Dimensions</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+      <tr>
+        <td><span class="badge rounded-pill bg-dark">N/A</span></td>
+        <td class="text-center">v1</td>
+        <td>Local Run</td>
+        <td class="text-center"><code>N/A</code><br>
+          <p clsss="text-muted"></p>
+        </td>
+        <td>&nbsp;</td>
+        <td class="text-center">180 x 180</td>
+    </tbody>
+
+    <caption class="pt-1 pb-3">Note: This table is generated from the environment configurations available <a
+        href="https://pera-swarm.ce.pdn.ac.lk/api/environments/" target="_blank">here</a></caption>
+  </table>
+</div>
+
+
+<script>
+  $(document).ready(() => {
+    const API_ENDPOINT = 'https://pera-swarm.ce.pdn.ac.lk/api/environments/';
+
+    $.ajax({
+      url: API_ENDPOINT,
+      type: "GET",
+      success: function (data) {
+        console.log(data);
+
+        const arenasTable = data.arenas.map((a) => {
+
+          const statusBadges = {
+            "ACTIVE": '<span class="badge rounded-pill bg-success">ACTIVE</span>',
+            "INACTIVE": '<span class="badge rounded-pill bg-secondary">INACTIVE</span>',
+            "UNDEFINED": '<span class="badge rounded-pill bg-dark">ACTIVE</span>',
+          };
+
+          const status = statusBadges[a.status];
+          const title = a.title;
+          const description = a.description;
+          const channel = a.channel;
+          const dimensions = `${a.dimensions.length} x ${a.dimensions.width}`;
+          const thumb = `img src="${a.thumbnail}">`;
+          const server = `<code>${a.server.ip}</code><br><p clsss="text-muted">${a.server.note}</p>`;
+          return `
+                <tr class="align-middle">
+                  <td>${status}</td>
+                  <td class="text-center">${channel}</td>
+                  <td>${title}</td>
+                  <td class="text-center">${server}</td>
+                  <td>${description}</td>
+                  <td class="text-center">${dimensions}</td>
+                </tr>`;
+        }).reduce((a, b) => `${a} ${b}`, '');
+
+        $("#tbody").append(arenasTable);
+      }
+    });
+  });
+</script>

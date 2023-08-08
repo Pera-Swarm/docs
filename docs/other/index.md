@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Useful Links
+title: Other
 nav_order: 98
 has_children: true
-permalink: links/
+permalink: other/
 has_toc: false
 ---
 
-# Useful Links
+## Useful Links
 {: .no_toc .pb-4}
 
 - [GitHub Organization](https://github.com/Pera-Swarm){:target="_blank"}

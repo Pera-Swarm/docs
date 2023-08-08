@@ -2,13 +2,15 @@
 layout: default
 title: Markdown Formats
 nav_order: 2
-permalink: documentation/markdown/
-parent: Useful Links
+permalink: other/documentation/markdown/
+
+parent: Documentation
+grand_parent: Other
 
 search_exclude: true
 sitemap: false
 
-gh_link: docs/guide/markdown.md
+gh_link: docs/other/documentation/2_page-template.md
 ---
 
 # Markdown Formats
