@@ -163,7 +163,7 @@ gh_link: docs/communication/mqtt/mqtt_sensor.md
     </td></tr>
 </table>
 
-## Proximity Sensor (Subject to change)
+## Proximity Sensor
 
 ### /sensor/proximity/{robotID}
 
@@ -172,16 +172,17 @@ gh_link: docs/communication/mqtt/mqtt_sensor.md
     <tr><td>Destination</td><td> Robot (Physical, Virtual)</td></tr>
     <tr><td>Data Type</td><td> String</td></tr>
     <tr><td>Message Format</td><td>
-        %d %d %d %d %d
+        [ vary with the request ]
     </td></tr>
     <tr><td>Description</td><td>
         Simulator will update virtual proximity sensor readings to the robot,
-        as the reply to the ‘/sensor/proximity’ topic.<br><br>
+        as the reply to the ‘/sensor/proximity’ topic. This is a full virtual sensor<br><br>
 
-        5 readings are representing the distance readings of following 5 angles,
-        relative to the heading direction of the robot.<br><br>
+        The response will be depend of the requested number of angles (it can be decided by the robot)<br><br>
 
-        <dd>[-150, -90, 0, 90, 150]</dd>
+        Example: for angels = [-90, 0, 90]
+        <dd><code>5 10 5 #404040 #000000 #FF0000</code></dd>
+        <dd>{dist on -90°} {dist on 0°} {dist on 90°} {color of -90°} {color of 0°} {color of 90°}</dd>
     </td></tr>
 </table>
 
@@ -193,15 +194,19 @@ gh_link: docs/communication/mqtt/mqtt_sensor.md
     <tr><td>Destination</td><td> Simulator </td></tr>
     <tr><td>Data Type</td><td> JSON</td></tr>
     <tr><td>Message Format</td><td>
-        {
-            "id":0, "reality":[reality]
-        }
-
+        <div class="language-json highlighter-rouge">
+            <code class="highlight">
+                {
+                    "id":0, "angles": [[angles]], "reality":[reality]
+                }
+            </code>
+        </div>
     </td></tr>
     <tr><td>Description</td><td>
         The sensor is entirely virtual and both virtual and physical robots can
         request the proximity readings from the simulator using this.
         <br><br>
+        <dd>angles: relative angles that measures should be taken, as an integer list. Ex: <code>[-90, 0, 90]</code></dd>
         <dd>reality(optional): V: virtual(default, and the only possible option far)</dd>
     </td></tr>
 </table>
