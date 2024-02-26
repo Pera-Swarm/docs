@@ -210,3 +210,24 @@ gh_link: docs/communication/mqtt/mqtt_sensor.md
         <dd>reality(optional): V: virtual(default, and the only possible option far)</dd>
     </td></tr>
 </table>
+
+
+## Comapss Sensor
+
+### /sensor/compass/{robotID}/?
+
+<table>
+    <tr><td>Source</td><td> Simulator</td></tr>
+    <tr><td>Destination</td><td> Robot ( Physical | Virtual ) </td></tr>
+    <tr><td>Data Type</td><td> String</td></tr>
+    <tr><td>Message Format</td><td>
+        ?
+    </td></tr>
+    <tr><td>Description</td><td>
+        This will request compass sensor readings from a robot.
+        Typically used by the Simulator or Sandbox.
+
+        <br><br>
+        <dd>robotID: Robot ID</dd>
+    </td></tr>
+</table>
