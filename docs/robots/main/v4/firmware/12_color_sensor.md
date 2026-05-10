@@ -1,9 +1,9 @@
 ---
-title: "IR Transceiver Library"
-nav_order: 14
+title: "Color Sensor Library"
+nav_order: 12
 ---
 
-## IR Transceiver Library
+## Color Sensor Library
 
 :::note
 Under Construction
@@ -18,5 +18,3 @@ Under Construction
 ### Configurations
 
 ### Additional Readings
-
-- TBD
