@@ -1,17 +1,15 @@
 
 install:
-	bundle install
+	uv sync
 
 serve: clean
-	bundle exec jekyll serve --livereload --incremental --force-polling
+	uv run sphinx-autobuild . _site
 
-# 'make build' etc..
 build: clean
-	bundle exec jekyll build
+	uv run sphinx-build -b html . _site
 
 test:
-	cd tests; python3 -m unittest discover -v -f
-
+	uv run sphinx-build -W -b html . _site
 
 clean:
 	rm -rf _site
@@ -22,4 +20,4 @@ emptyCommit:
 	git push
 
 run: clean
-	bundle exec jekyll serve --livereload --incremental
+	uv run sphinx-build -b html . _site

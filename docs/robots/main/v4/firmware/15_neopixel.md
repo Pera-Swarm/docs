@@ -1,27 +1,13 @@
 ---
-layout: default
-parent: Firmware
-grand_parent: Main Robots
-title: Neopixel LED Library
+title: "Neopixel LED Library"
 nav_order: 15
-permalink: robots/v4/firmware/neopixel_library/
-
-gh_link: docs/robots/main/v4/firmware/15_neopixel.md
 ---
 
-# Neopixel LED Library
-{: .no_toc }
+## Neopixel LED Library
 
-##### Table of content
-{: .no_toc }
+### Getting started
 
-- TOC
-{:toc}
-
-----
-## Getting started
-
-Neopixel LED array contains 21 WS2812 addressable LEDs and 20 of them displayed in the outer ring of the robot. (First LED isn't exposed to the outside) This robot is using [Adafruit Neopixel](https://github.com/adafruit/Adafruit_NeoPixel){:target="_blank"} library to control the NeoPixels.
+NeoPixel LED array contains 21 WS2812 addressable LEDs and 20 of them displayed in the outer ring of the robot. (First LED isn't exposed to the outside) This robot is using [Adafruit Neopixel](https://github.com/adafruit/Adafruit_NeoPixel) library to control the NeoPixels.
 
 To enable the NeoPixel LED ring, the following should be uncommented in *features.h*.
 
@@ -29,7 +15,7 @@ To enable the NeoPixel LED ring, the following should be uncommented in *feature
 #define ENABLE_NEOPIXEL_RING
 ```
 
-## Setup
+### Setup
 
 The followings are the definitions and the constructor used for the NeoPixels. We recommended to keep them as default.
 
@@ -51,13 +37,11 @@ Adafruit_NeoPixel neopixel(NEOPIXEL_LED_COUNT, PIN_NEOPIXEL_LED, NEO_GRB + NEO_K
 void beginNeoPixel();
 ```
 
-
-## Available Library Functions
+### Available Library Functions
 
 Following functions can be accessed through the Adafruit Library
 
-
-### neopixel.setPixelColor(n, r, g, b)
+#### neopixel.setPixelColor(n, r, g, b)
 
 Set a pixel's color using separate red, green, and blue components.
 
@@ -70,7 +54,7 @@ Set a pixel's color using separate red, green, and blue components.
 void setPixelColor(uint16_t n, uint8_t r, uint8_t g, uint8_t b);
 ```
 
-### neopixel.getPixelColor(n)
+#### neopixel.getPixelColor(n)
 
 Query the color of a previously-set pixel.
 
@@ -81,7 +65,7 @@ uint32_t Adafruit_NeoPixel::getPixelColor(uint16_t n);
 
 ```
 
-### neopixel.Color(r, g, b);
+#### neopixel.Color(r, g, b)
 
 Convert separate red, green and blue values into a single packed 32-bit RGB color
 
@@ -93,7 +77,7 @@ Convert separate red, green and blue values into a single packed 32-bit RGB colo
 static uint32_t Color(uint8_t r, uint8_t g, uint8_t b)
 ```
 
-###  neopixel.ColorHSV(hue, sat, val)
+#### neopixel.ColorHSV(hue, sat, val)
 
 Convert hue, saturation, and value into a packed 32-bit RGB color that can be passed to setPixelColor() or other RGB-compatible functions.
 
@@ -105,7 +89,7 @@ Convert hue, saturation, and value into a packed 32-bit RGB color that can be pa
 uint32_t ColorHSV(uint16_t hue, uint8_t sat, uint8_t val);
 ```
 
-### neopixel.fill(c, first, count)
+#### neopixel.fill(c, first, count)
 
 Fill all or part of the NeoPixel strip with a color, c
 
@@ -117,7 +101,7 @@ Fill all or part of the NeoPixel strip with a color, c
 void fill(uint32_t c=0, uint16_t first=0, uint16_t count=0);
 ```
 
-### neopixel.setBrightness(b)
+#### neopixel.setBrightness(b)
 
 Adjust output brightness. Does not immediately affect what's currently displayed on the LEDs. The next call to show() will refresh the LEDs at this level.
 
@@ -127,7 +111,7 @@ Adjust output brightness. Does not immediately affect what's currently displayed
 void setBrightness(uint8_t b);
 ```
 
-### neopixel.show()
+#### neopixel.show()
 
 Transmit pixel data in the microcontroller to NeoPixels.
 
@@ -135,15 +119,15 @@ Transmit pixel data in the microcontroller to NeoPixels.
 void show();
 ```
 
-### neopixel.clear();
+#### neopixel.clear()
+
 Fill the whole NeoPixel strip with 0 / black / off.
 
 ```cpp
 void clear();
 ```
 
-
-## Implemented Functions
+### Implemented Functions
 
 Followings are implemented in **neoPixel.ino**.
 
@@ -168,7 +152,7 @@ void whiteOverRainbow(int whiteSpeed, int whiteLength);
 void rainbowFade2White(int wait, int rainbowLoops, int whiteLoops);
 ```
 
-## Additional Readings
+### Additional Readings
 
-- [Adafruit NeoPixel Library](https://github.com/adafruit/Adafruit_NeoPixel){:target="_blank"}
-- [WS2812B Datasheet](https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf){:target="_blank"}
+- [Adafruit NeoPixel Library](https://github.com/adafruit/Adafruit_NeoPixel)
+- [WS2812B Datasheet](https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf)
