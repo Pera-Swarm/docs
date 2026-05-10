@@ -12,8 +12,12 @@ gh_link: docs/other/testing.md
 
 <h3>Working Channels</h3>
 
-<p>Following channels are available with the default credentials. (Please request the credentials from
-  <a href="https://people.ce.pdn.ac.lk/students/e15/140/" target="_blank">@Nuwan</a>)
+<p>
+  Following channels are available with the default credentials. (Please request
+  the credentials from
+  <a href="https://people.ce.pdn.ac.lk/students/e15/140/" target="_blank"
+    >@Nuwan</a
+  >)
 </p>
 
 <div class="table-responsive">
@@ -33,22 +37,46 @@ gh_link: docs/other/testing.md
         <td><span class="badge rounded-pill bg-dark">N/A</span></td>
         <td class="text-center">v1</td>
         <td>Local Run</td>
-        <td class="text-center"><code>N/A</code><br>
+        <td class="text-center">
+          <code>N/A</code><br />
           <p clsss="text-muted"></p>
         </td>
         <td>&nbsp;</td>
         <td class="text-center">180 x 180</td>
+      </tr>
     </tbody>
 
-    <caption class="pt-1 pb-3">Note: This table is generated from the environment configurations available <a
-        href="https://pera-swarm.ce.pdn.ac.lk/api/environments/" target="_blank">here</a></caption>
+    <caption class="pt-1 pb-3">
+      Note: This table is generated from the environment configurations
+      available
+      <a
+        href="https://pera-swarm.ce.pdn.ac.lk/api/environments/"
+        target="_blank"
+        >here</a
+      >.
+    </caption>
   </table>
-</div>
 
+  <div>
+    <h5>Tesla MQTT broker</h5>
+    <div>Host: <i>tesla.ce.pdn.ac.lk</i></div>
+    <div>
+      Port: <i>443</i> (for WSS mode only. Use 1883 if you connect via MQTT
+      protocol)
+    </div>
+    <div>Username: <i>swarm-user-1</i> / <i>swarm-user-2</i></div>
+    <div>
+      Password: (Please request the credentials from
+      <a href="https://people.ce.pdn.ac.lk/students/e15/140/" target="_blank"
+        >@Nuwan</a
+      >)
+    </div>
+  </div>
+</div>
 
 <script>
   $(document).ready(() => {
-    const API_ENDPOINT = 'https://pera-swarm.ce.pdn.ac.lk/api/environments/';
+    const API_ENDPOINT = "https://pera-swarm.ce.pdn.ac.lk/api/environments/";
 
     $.ajax({
       url: API_ENDPOINT,
@@ -56,22 +84,25 @@ gh_link: docs/other/testing.md
       success: function (data) {
         console.log(data);
 
-        const arenasTable = data.arenas.map((a) => {
+        const arenasTable = data.arenas
+          .map((a) => {
+            const statusBadges = {
+              ACTIVE:
+                '<span class="badge rounded-pill bg-success">ACTIVE</span>',
+              INACTIVE:
+                '<span class="badge rounded-pill bg-secondary">INACTIVE</span>',
+              UNDEFINED:
+                '<span class="badge rounded-pill bg-dark">ACTIVE</span>',
+            };
 
-          const statusBadges = {
-            "ACTIVE": '<span class="badge rounded-pill bg-success">ACTIVE</span>',
-            "INACTIVE": '<span class="badge rounded-pill bg-secondary">INACTIVE</span>',
-            "UNDEFINED": '<span class="badge rounded-pill bg-dark">ACTIVE</span>',
-          };
-
-          const status = statusBadges[a.status];
-          const title = a.title;
-          const description = a.description;
-          const channel = a.channel;
-          const dimensions = `${a.dimensions.length} x ${a.dimensions.width}`;
-          const thumb = `img src="${a.thumbnail}">`;
-          const server = `<code>${a.server.ip}</code><br><p clsss="text-muted">${a.server.note}</p>`;
-          return `
+            const status = statusBadges[a.status];
+            const title = a.title;
+            const description = a.description;
+            const channel = a.channel;
+            const dimensions = `${a.dimensions.length} x ${a.dimensions.width}`;
+            const thumb = `img src="${a.thumbnail}">`;
+            const server = `<code>${a.server.ip}</code><br><p clsss="text-muted">${a.server.note}</p>`;
+            return `
                 <tr class="align-middle">
                   <td>${status}</td>
                   <td class="text-center">${channel}</td>
@@ -80,10 +111,11 @@ gh_link: docs/other/testing.md
                   <td>${description}</td>
                   <td class="text-center">${dimensions}</td>
                 </tr>`;
-        }).reduce((a, b) => `${a} ${b}`, '');
+          })
+          .reduce((a, b) => `${a} ${b}`, "");
 
         $("#tbody").append(arenasTable);
-      }
+      },
     });
   });
 </script>
